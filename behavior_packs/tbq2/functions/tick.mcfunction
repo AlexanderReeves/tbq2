@@ -12,3 +12,7 @@ execute @s[scores={tick=20}] ~ ~ ~ scoreboard players set @s tick 0
 
 execute @s[scores={gamestate=0}] ~ ~ ~ function lobby/teamselection
 
+execute @e[type=item,name=Stick] ~ ~ ~ playanimation @e[type=tbq:tvlever] animation.tvlever.pull
+kill @e[type=item,name=Stick]
+
+
