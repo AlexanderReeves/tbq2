@@ -14,6 +14,10 @@ scoreboard players set @e[tag=bob] tick 0
 scoreboard objectives add seconds dummy seconds
 scoreboard players set @e[tag=bob] seconds 0
 
+#Check number of active players on teams
+scoreboard objectives add activeplayers dummy activeplayers
+scoreboard players set @e[tag=bob] activeplayers 0
+
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
 scoreboard players set @e[tag=bob] gamestate 0
@@ -21,3 +25,9 @@ scoreboard players set @e[tag=bob] gamestate 0
 #   0 = lobby state
 #   1 = ready up
 
+
+#-----------------------------------------
+
+
+#Remove players from teams
+function misc/emptyteams
