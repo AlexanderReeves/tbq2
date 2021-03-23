@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tbq:audience",
+      "materials": { "default": "turtle" },
+      "textures": {
+
+        "default": "textures/entity/snow_golem"
+      },
+      "geometry": {
+        "default": "geometry.audience"
+      },
+      "animations": {
+	      "clap": "animation.audience.clap"
+      },
+      "scripts": {
+          "animate": [
+            "clap"
+          ]
+        },
+      "render_controllers": ["controller.render.audience"],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#ffffff"
+      }
+    }
+  }
+}

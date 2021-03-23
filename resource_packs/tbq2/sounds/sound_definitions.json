@@ -1,0 +1,89 @@
+{
+   "format_version" : "1.14.0",
+   "sound_definitions" : {
+   
+      //Custom
+      "custom.music.lobby": {
+      "min_distance": 100.0,
+      "sounds": [{"name":"sounds/custom/music/lobby", "attenuation_distance":100, "stream": true}]
+       },
+      //Custom
+      "custom.music.iris1": {
+      "min_distance": 100.0,
+      "sounds": [{"name":"sounds/custom/music/iris1", "attenuation_distance":100, "stream": true}]
+       },
+      //Custom
+      "custom.music.iris2": {
+      "min_distance": 100.0,
+      "sounds": [{"name":"sounds/custom/music/iris2", "attenuation_distance":100, "stream": true}]
+       },
+      //Custom
+      "custom.music.seb": {
+      "min_distance": 100.0,
+      "sounds": [{"name":"sounds/custom/music/seb", "attenuation_distance":100, "stream": true}]
+       },
+
+      "mob.shulker.ambient" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.bullet.hit" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.close" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.close.hurt" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.death" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.hurt" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.open" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.shoot" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [
+
+         ]
+      },
+      "mob.shulker.teleport" : {
+         "__use_legacy_max_distance" : "true",
+         "category" : "neutral",
+         "sounds" : [  ]
+      }
+
+   }
+}

@@ -1,0 +1,57 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.board.hover": {
+			"loop": true,
+			"animation_length": 1.04,
+			"bones": {
+				"internal": {
+					"position": {
+						"0.0": [0, 0, 0],
+						"0.5167": [0, -2, 0],
+						"1.0333": [0, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.board.questionspin": {
+			"animation_length": 2.08,
+			"override_previous_animation": true,
+			"bones": {
+				"qm1": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, 0, 0],
+						"2.08": [0, 360, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 1],
+						"0.52": [0, 0, -16]
+					}
+				},
+				"qm2": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, 0, 0],
+						"2.08": [0, 360, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 1],
+						"0.52": [0, 0, -16]
+					}
+				},
+				"qm3": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [0, 0, 0],
+						"2.08": [0, 360, 0]
+					},
+					"position": {
+						"0.0": [0, 0, 1],
+						"0.52": [0, 0, -16]
+					}
+				}
+			}
+		}
+	}
+}
