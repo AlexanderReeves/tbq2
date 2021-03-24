@@ -13,3 +13,9 @@ summon tbq:audience 120 25 -207
 #Game start lever
 kill @e[type=tbq:tvlever]
 summon tbq:tvlever 127 30 -237.8
+
+#Cameras
+kill @e[type=tbq:camera]
+summon tbq:camera 127 28 -193
+tag @e[type=tbq:camera,tag=!tagged] add viewstage
+tag @e[type=tbq:camera,tag=!tagged] add tagged
