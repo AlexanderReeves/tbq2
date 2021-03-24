@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tbq:camera",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+
+        "default": "textures/entity/camera"
+      },
+      "geometry": {
+        "default": "geometry.camera"
+      },
+      "animations": {
+        "hover": "animation.powerup.hover"
+      },
+      "scripts": {
+
+        },
+      "render_controllers": ["controller.render.camera"],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#ffffff"
+      }
+    }
+  }
+}

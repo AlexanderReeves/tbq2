@@ -1,0 +1,1 @@
+execute @s[scores={tick=0}] ~ ~ ~ function intro/second

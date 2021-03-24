@@ -19,6 +19,8 @@ execute @s[scores={tick=20}] ~ ~ ~ scoreboard players set @s tick 0
 #Run the code based on the gamestate!
 execute @s[scores={gamestate=0}] ~ ~ ~ function lobby/main
 execute @s[scores={gamestate=1}] ~ ~ ~ function pregame/main
+execute @s[scores={gamestate=2}] ~ ~ ~ function intro/main
+
 
 
 

@@ -5,3 +5,4 @@ execute @a[tag=!spectator] ~ ~ ~ scoreboard players add @e[tag=bob] activeplayer
 #End game if there are no active players left!
 execute @s[scores={activeplayers=0,gamestate=1..}] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§cThe game has ended as there are no players left."}]}
 execute @s[scores={activeplayers=0,gamestate=1..}] ~ ~ ~ function misc/endgame
+
