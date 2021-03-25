@@ -14,8 +14,14 @@ summon tbq:audience 120 25 -207
 kill @e[type=tbq:tvlever]
 summon tbq:tvlever 127 30 -237.8
 
+#Kill bill lol
+kill @e[type=tbq:billagers]
+
 #Cameras
 kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193
 tag @e[type=tbq:camera,tag=!tagged] add viewstage
+tag @e[type=tbq:camera,tag=!tagged] add tagged
+summon tbq:camera 127 34 -152
+tag @e[type=tbq:camera,tag=!tagged] add viewbill
 tag @e[type=tbq:camera,tag=!tagged] add tagged

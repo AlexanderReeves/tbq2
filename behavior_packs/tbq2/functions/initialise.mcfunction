@@ -32,5 +32,12 @@ scoreboard players set @e[tag=bob] gamestate 0
 #Remove players from teams
 function misc/emptyteams
 
+#restart players
+function setup/spawnplayers
+
 #Set up entities
 function setup/entities
+
+
+#Gamerules
+gamerule sendcommandfeedback false

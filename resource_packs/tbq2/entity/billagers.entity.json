@@ -1,0 +1,31 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tbq:billagers",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+
+        "default": "textures/entity/billagers"
+      },
+      "geometry": {
+        "default": "geometry.billagers"
+      },
+      "animations": {
+	      "clap": "animation.audience.clap"
+      },
+      "scripts": {
+          "animate": [
+            "clap"
+          ]
+        },
+      "render_controllers": ["controller.render.billagers"],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#ffffff"
+      }
+    }
+  }
+}
