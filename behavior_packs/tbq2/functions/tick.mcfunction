@@ -25,6 +25,11 @@ execute @s[scores={tick=20}] ~ ~ ~ scoreboard players set @s tick 0
 execute @s[scores={gamestate=0}] ~ ~ ~ function lobby/main
 execute @s[scores={gamestate=1}] ~ ~ ~ function pregame/main
 execute @s[scores={gamestate=2}] ~ ~ ~ function intro/main
+execute @s[scores={gamestate=3}] ~ ~ ~ function game/main
+
+
+#heal players
+effect @a instant_health 1 1 true
 
 
 

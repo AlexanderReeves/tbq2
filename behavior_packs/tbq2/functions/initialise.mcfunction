@@ -24,12 +24,23 @@ scoreboard objectives add redplayers dummy redplayers
 scoreboard objectives add blueplayers dummy blueplayers
 scoreboard objectives add yellowplayers dummy yellowplayers
 
+#scoreboard to check what question the game is up to
+scoreboard objectives add question dummy question
+scoreboard players set @e[tag=bob] question 1
+#-------------------------------------------
+
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
 scoreboard players set @e[tag=bob] gamestate 0
 #   gamestate key
 #   0 = lobby state
 #   1 = ready up
+#   2 = game and players introduction
+#   3 = round one of two
+#   4 = mid game chaos
+#   5 = round two of two
+#   6 = end game chaos
+#   7 = winner announced and outro
 
 
 #-----------------------------------------

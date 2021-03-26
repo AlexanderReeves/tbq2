@@ -14,15 +14,8 @@ execute @s[scores={seconds=10}] ~ ~ ~ tp @e[type=tbq:camera,tag=viewbill,c=1] 12
 execute @s[scores={seconds=12}] ~ ~ ~ title @a actionbar §aMy name is Bill Agers, and I'll be your host for the night.
 execute @s[scores={seconds=15}] ~ ~ ~ title @a actionbar §aLet's take a moment to introduce the contestants!
 
-#into contestants from main cam
-execute @s[scores={seconds=20}] ~ ~ ~ title @a actionbar §aThe blue team!
-execute @s[scores={seconds=20}] ~ ~ ~ tp @a[tag=blue] 127 28 -188 180 0
-execute @s[scores={seconds=26}] ~ ~ ~ title @a actionbar §aThe yellow team!
-execute @s[scores={seconds=26}] ~ ~ ~ tp @a[tag=yellow] 127 28 -188 180 0
-execute @s[scores={seconds=32}] ~ ~ ~ title @a actionbar §aThe green team!
-execute @s[scores={seconds=32}] ~ ~ ~ tp @a[tag=green] 127 28 -188 180 0
-execute @s[scores={seconds=38}] ~ ~ ~ title @a actionbar §aThe red team!
-execute @s[scores={seconds=38}] ~ ~ ~ tp @a[tag=red] 127 28 -188 180 0
+execute @s[scores={seconds=44}] ~ ~ ~ title @a actionbar §aNow that you're all aquainted, it's time for the first round!
+execute @s[scores={seconds=44}] ~ ~ ~ kill @e[type=tbq:logo]
 
 
 
