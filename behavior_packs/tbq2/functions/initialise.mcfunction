@@ -18,6 +18,12 @@ scoreboard players set @e[tag=bob] seconds 0
 scoreboard objectives add activeplayers dummy activeplayers
 scoreboard players set @e[tag=bob] activeplayers 0
 
+#scoreboard to see if a team has players
+scoreboard objectives add greenplayers dummy greenplayers
+scoreboard objectives add redplayers dummy redplayers
+scoreboard objectives add blueplayers dummy blueplayers
+scoreboard objectives add yellowplayers dummy yellowplayers
+
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
 scoreboard players set @e[tag=bob] gamestate 0

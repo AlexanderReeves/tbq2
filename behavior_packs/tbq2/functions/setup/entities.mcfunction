@@ -17,6 +17,9 @@ summon tbq:tvlever 127 30 -237.8
 #Kill bill lol
 kill @e[type=tbq:billagers]
 
+#Kill any logo
+kill @e[type=tbq:logo]
+
 #Cameras
 kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193

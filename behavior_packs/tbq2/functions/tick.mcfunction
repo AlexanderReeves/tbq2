@@ -7,8 +7,13 @@
 #Say bob the squid is running the game engine.
 
 
+#=======UPDATE IMPORTANT MISC VARIABLES!!!!======
 #check the number of active players
 function misc/checktotalplayers
+#Check which teams are active!
+function misc/checkactiveteams
+
+#======================================
 
 #update the clock!
 scoreboard players add @s tick 1
