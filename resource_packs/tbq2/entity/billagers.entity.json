@@ -14,11 +14,11 @@
         "default": "geometry.billagers"
       },
       "animations": {
-	      "clap": "animation.audience.clap"
+	      "walk": "animation.billagers.walk"
       },
       "scripts": {
           "animate": [
-            "clap"
+            { "walk": "query.modified_move_speed" }
           ]
         },
       "render_controllers": ["controller.render.billagers"],
