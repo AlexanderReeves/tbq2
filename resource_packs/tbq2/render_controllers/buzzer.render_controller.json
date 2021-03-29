@@ -1,0 +1,23 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+      "controller.render.buzzer": {
+        "arrays": {
+          "textures": {
+            "Array.skins": [
+              "Texture.green",
+              "Texture.yellow",
+              "Texture.blue"
+            ]
+          }
+        },
+        "geometry": "Geometry.default",
+        "materials": [  {  "*": "Material.default"   } ],
+        //Buzzer color based on invisible helmet #Leather helm = blue
+        "textures": [ "query.armor_texture_slot(0) == 0 ? Array.skins[1] :  (query.armor_texture_slot(0) == 1 ? Array.skins[2] :  Array.skins[3]) " ],
+        "part_visibility" : [
+          { "*": true }
+        ]
+      }
+    }
+  }

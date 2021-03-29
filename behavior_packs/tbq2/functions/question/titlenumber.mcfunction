@@ -1,4 +1,4 @@
-#Displays the question as a subtitle for all players
+#DISPLAY WHICH QUESTION NUMBER WE ARE UP TO
 execute @s[scores={question=1}] ~ ~ ~ title @a title Q1
 execute @s[scores={question=2}] ~ ~ ~ title @a title Q2
 execute @s[scores={question=3}] ~ ~ ~ title @a title Q3

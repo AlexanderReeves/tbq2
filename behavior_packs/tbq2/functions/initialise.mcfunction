@@ -37,6 +37,13 @@ scoreboard players set @e[tag=bob] quid 0
 scoreboard objectives add qcat dummy qcat
 scoreboard players set @e[tag=bob] qcat 0
 
+#scoreboard to check each teams currentanswer and the correct answer
+#scoreboard to track players answers
+scoreboard objectives add answer dummy answer
+scoreboard players set @a answer 0
+scoreboard objectives add correctanswer dummy correctanswer
+scoreboard players set @e[tag=bob] correctanswer 0
+
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
 scoreboard players set @e[tag=bob] gamestate 0

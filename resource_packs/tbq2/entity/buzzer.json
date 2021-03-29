@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tbq:buzzer",
+      "materials": {
+        "default": "skeleton"
+      },
+      "textures": {
+
+        "blue": "textures/entity/buzzerblue",
+        "yellow": "textures/entity/buzzeryellow",
+        "green": "textures/entity/buzzergreen"
+
+      },
+
+      "geometry": {
+        "default": "geometry.buzzer"
+      },
+      "animations": {
+	      "hover": "animation.powerup.hover"
+      },
+      "scripts": {          
+
+        },
+      "render_controllers": ["controller.render.buzzer"],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#ffffff"
+      }
+    }
+  }
+}

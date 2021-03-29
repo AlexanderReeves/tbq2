@@ -1,0 +1,71 @@
+{
+    "format_version": "1.14",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "tbq:buzzer",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false
+      },
+      "component_groups": {
+      },
+      
+      "components": {
+        "minecraft:interact": {
+            "interactions": [
+              {
+                "on_interact": {
+                  "filters": {
+                  }
+                },
+                "interact_text": "Begin Game",
+                  "spawn_items": {
+                    "table": "loot_tables/entities/answer.json"
+                  }
+              }
+            ]
+          },
+  
+        //the family type for filters
+      "minecraft:type_family": {
+          "family": [
+              "tbq",
+              "buzzer",
+              "neutral",
+              "nether_mob"
+          ]
+      },
+      "minecraft:scale": {
+          "value": 1
+      },
+  
+      //hitbox/shadow
+      "minecraft:collision_box": {
+          "width": 0.5,
+          "height": 0.5
+      },
+      //health, speed and some other self-explainable properties
+      "minecraft:nameable": {},
+  
+  
+  
+      "minecraft:physics": {"has_gravity": false, "has_collision": false},
+  
+      "minecraft:damage_sensor": {
+        "triggers": {
+            "cause": "all",
+            "deals_damage": false
+        }
+      }
+
+      },
+  
+
+  
+  
+      "events": {
+  
+      }
+  
+    }
+  }
