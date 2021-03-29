@@ -5,6 +5,8 @@ tellraw @a {"rawtext":[{"text":"§a~~~§bThe Big Quiz 2 is initalising!§a~~~"}]
 kill @e[type=squid]
 summon minecraft:squid 127 26 -229
 tag @e[type=minecraft:squid] add bob
+#Bob needs the hidebar tag, which prevents players seeing their timerbars at this time
+tag @e[type=minecraft:squid] add hidebar
 
 #--------------SET UP SCOREBOARDS-------
 #ticker (20 times per second)
@@ -23,11 +25,17 @@ scoreboard objectives add greenplayers dummy greenplayers
 scoreboard objectives add redplayers dummy redplayers
 scoreboard objectives add blueplayers dummy blueplayers
 scoreboard objectives add yellowplayers dummy yellowplayers
+scoreboard players set @e[tag=bob] greenplayers 0
+scoreboard players set @e[tag=bob] redplayers 0
+scoreboard players set @e[tag=bob] blueplayers 0
+scoreboard players set @e[tag=bob] yellowplayers 0
 
-#scoreboard to check what question the game is up to
-scoreboard objectives add question dummy question
-scoreboard players set @e[tag=bob] question 1
-#-------------------------------------------
+#Scoreboard to pick which random question will be used (Question ID)
+scoreboard objectives add qid dummy qid
+scoreboard players set @e[tag=bob] quid 0
+#Scoreboard to pick which question category will be used (Question category)
+scoreboard objectives add qcat dummy qcat
+scoreboard players set @e[tag=bob] qcat 0
 
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
@@ -35,12 +43,6 @@ scoreboard players set @e[tag=bob] gamestate 0
 #   gamestate key
 #   0 = lobby state
 #   1 = ready up
-#   2 = game and players introduction
-#   3 = round one of two
-#   4 = mid game chaos
-#   5 = round two of two
-#   6 = end game chaos
-#   7 = winner announced and outro
 
 
 #-----------------------------------------

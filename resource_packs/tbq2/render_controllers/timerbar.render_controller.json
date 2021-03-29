@@ -1,0 +1,15 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+      "controller.render.player.timerbar": {
+        "geometry": "Geometry.timerbar",
+        "materials": [ { "*": "Material.default" } ],
+        "textures": [ "Texture.timerbar" ],
+        "part_visibility": [
+            //Board only shows while wearing a leather helmet
+          { "*": "(variable.is_first_person == 1)" }
+        ]
+      }
+    }
+  }
+  

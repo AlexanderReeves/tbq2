@@ -11,12 +11,14 @@
       "textures": {
         "default": "textures/entity/steve",
         "cape": "textures/entity/cape_invisible",
-        "playerboard": "textures/entity/playerboard"
+        "playerboard": "textures/entity/playerboard",
+        "timerbar": "textures/entity/timerbar"
       },
       "geometry": {
         "default": "geometry.humanoid.custom",
         "cape": "geometry.cape",
-        "playerboard": "geometry.playerboard"
+        "playerboard": "geometry.playerboard",
+        "timerbar": "geometry.timerbar"
       },
       "scripts": {
         "scale": "0.9375",
@@ -98,7 +100,8 @@
         { "controller.render.player.first_person": "variable.is_first_person" },
         { "controller.render.player.third_person": "!variable.is_first_person && !variable.map_face_icon" },
         { "controller.render.player.map": "variable.map_face_icon" },
-        { "controller.render.player.playerboard": true }
+        { "controller.render.player.playerboard": true },
+        { "controller.render.player.timerbar": true }
       ],
       "enable_attachables": true
     }
