@@ -44,6 +44,23 @@ scoreboard players set @a answer 0
 scoreboard objectives add correctanswer dummy correctanswer
 scoreboard players set @e[tag=bob] correctanswer 0
 
+#Scoreboards to track teams scores
+scoreboard objectives add bluescore dummy bluescore
+scoreboard players set @e[tag=bob] bluescore 0
+scoreboard objectives add redscore dummy redscore
+scoreboard players set @e[tag=bob] redscore 0
+scoreboard objectives add yellowscore dummy yellowscore
+scoreboard players set @e[tag=bob] yellowscore 0
+scoreboard objectives add greenscore dummy greenscore
+scoreboard players set @e[tag=bob] greenscore 0
+scoreboard objectives add scoredisplay dummy Points
+
+#Scoreboard to end the game if enough players try to quit
+scoreboard objectives add quitvote dummy "Votes to quit"
+scoreboard players set @e[tag=bob] quitvote 0
+scoreboard objectives add totalplayers dummy totalplayers
+scoreboard players set @e[tag=bob] totalplayers 0
+
 #gamestate
 scoreboard objectives add gamestate dummy gamestate
 scoreboard players set @e[tag=bob] gamestate 0

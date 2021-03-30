@@ -31,6 +31,9 @@ execute @s[scores={gamestate=3}] ~ ~ ~ function game/main
 #heal players
 effect @a instant_health 1 1 true
 
+#End the game if enough players drop gunpowder
+execute @e[type=item,name=gunpowder] ~ ~ ~ function misc/tryendgame
+
 
 
 

@@ -1,9 +1,11 @@
+
 #Give all a leather helmet.... This will load a special display board view on for each player!
 execute @s[scores={seconds=2}] ~ ~ ~ replaceitem entity @a slot.armor.head 1 leather_helmet 1
 
 #Allow the timerbar to be displayed via removing the tag "hidebar" from bob
 execute @s[scores={seconds=2}] ~ ~ ~ tag @s remove hidebar
 execute @s[scores={seconds=2}] ~ ~ ~ playanimation @a animation.timerbar.deplete
+execute @s[scores={seconds=2}] ~ ~ ~ scoreboard objectives setdisplay sidebar
 
 #GENERATE RANDOM QUESTION!
 execute @s[scores={seconds=2}] ~ ~ ~ scoreboard players random @s qid 1 3
@@ -22,7 +24,7 @@ execute @s[scores={seconds=10}] ~ ~ ~ function question/anssidebar
 #Hide timerbar
 execute @s[scores={seconds=22}] ~ ~ ~ tag @s add hidebar
 execute @s[scores={seconds=25}] ~ ~ ~ function question/checkanswers
-execute @s[scores={seconds=25}] ~ ~ ~ scoreboard objectives setdisplay sidebar
+execute @s[scores={seconds=25}] ~ ~ ~ scoreboard objectives setdisplay sidebar scoredisplay
 
 
 

@@ -1,5 +1,5 @@
 #execute as bob, based on qid, based on teams answer
-execute @s[scores={qid=1}] ~ ~ ~ title @a[scores={answer=1}] actionbar Your team chose : §aIt does not exist. 
+execute @s[scores={qid=1}] ~ ~ ~ title @a[scores={answer=1}] actionbar Your team chose : §bIt does not exist. 
 execute @s[scores={qid=1}] ~ ~ ~ title @a[scores={answer=2}] actionbar Your team chose : §eMinecraft's Java Realms. 
 execute @s[scores={qid=1}] ~ ~ ~ title @a[scores={answer=3}] actionbar Your team chose : §bThe Bedrock Marketplace. 
 

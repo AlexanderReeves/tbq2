@@ -53,14 +53,15 @@ execute @s[scores={seconds=37..42}] ~ ~ ~ tag @a[tag=red,tag=!moved] add moved
 execute @s[scores={seconds=25}] ~ ~ ~ tag @a remove moved
 
 #TP players back to viewing Bill!
-execute @s[scores={seconds=43..48}] ~ ~ ~ tp @a @e[type=tbq:camera,c=1,tag=viewbill]
-execute @s[scores={seconds=43..48}] ~ ~ ~ execute @a ~ ~ ~ tp @s ~ ~ ~ 0 1
+execute @s[scores={seconds=43..60}] ~ ~ ~ tp @a @e[type=tbq:camera,c=1,tag=viewbill]
+execute @s[scores={seconds=43..60}] ~ ~ ~ execute @a ~ ~ ~ tp @s ~ ~ ~ 0 1
 
 #Set game to intro mode
-execute @s[scores={seconds=49}] ~ ~ ~ scoreboard players set @s gamestate 3
-execute @s[scores={seconds=49}] ~ ~ ~ scoreboard players set @s tick 0
-execute @s[scores={seconds=49}] ~ ~ ~ tag @s add runquestion
-execute @s[scores={seconds=49}] ~ ~ ~ scoreboard players set @s seconds 0
+execute @s[scores={seconds=60}] ~ ~ ~ kill @e[type=tbq:logo]
+execute @s[scores={seconds=60}] ~ ~ ~ scoreboard players set @s gamestate 3
+execute @s[scores={seconds=60}] ~ ~ ~ scoreboard players set @s tick 0
+execute @s[scores={seconds=60}] ~ ~ ~ tag @s add runquestion
+execute @s[scores={seconds=60}] ~ ~ ~ scoreboard players set @s seconds 0
 
 
 
