@@ -16,4 +16,6 @@ scoreboard objectives setdisplay sidebar scoredisplay
 scoreboard players set @s quitvote 0
 scoreboard players set @s totalplayers 0
 
+function misc/wheelbackground
+
 

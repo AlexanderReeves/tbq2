@@ -35,5 +35,9 @@ effect @a instant_health 1 1 true
 execute @e[type=item,name=gunpowder] ~ ~ ~ function misc/tryendgame
 
 
+#WHEEL TEST
+execute @e[type=tbq:wheel] ~ ~ ~ tp @s ~ ~ ~ ~15 ~
+
+
 
 
