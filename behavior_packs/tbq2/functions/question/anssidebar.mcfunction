@@ -7,7 +7,6 @@ scoreboard objectives add answeroptions dummy Answers
 #Display answers
 scoreboard objectives setdisplay sidebar answeroptions
 
-say anssidebar
 
 execute @s[scores={qid=1}] ~ ~ ~ scoreboard players set "§aIt does not exist. " answeroptions 1
 execute @s[scores={qid=1}] ~ ~ ~ scoreboard players set "§eMinecraft's Java Realms. " answeroptions 2
