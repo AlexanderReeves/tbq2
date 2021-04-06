@@ -36,7 +36,7 @@ execute @e[type=item,name=gunpowder] ~ ~ ~ function misc/tryendgame
 
 
 #WHEEL TEST
-execute @e[type=tbq:wheel] ~ ~ ~ tp @s ~ ~ ~ ~15 ~
+#execute @e[type=tbq:wheel] ~ ~ ~ tp @s ~ ~ ~ ~15 ~
 
 
 

@@ -85,3 +85,8 @@ replaceitem entity @e[type=tbq:buzzer,tag=g2] slot.armor.head 0 leather_helmet
 replaceitem entity @e[type=tbq:buzzer,tag=g3] slot.armor.head 0 chainmail_helmet
 replaceitem entity @e[type=tbq:buzzer,tag=r2] slot.armor.head 0 leather_helmet
 replaceitem entity @e[type=tbq:buzzer,tag=r3] slot.armor.head 0 chainmail_helmet
+
+#wheel lever
+kill @e[type=tbq:wheellever]
+summon tbq:wheellever 141 28 -151
+

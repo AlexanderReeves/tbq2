@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.wheellever.pull": {
+			"animation_length": 2.64,
+			"bones": {
+				"lever": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"0.52": [112.5, 0, 0]
+					}
+				}
+			}
+		}
+	}
+}
