@@ -30,10 +30,15 @@ execute @s[scores={seconds=25}] ~ ~ ~ scoreboard objectives setdisplay sidebar s
 
 #Go to next question
 execute @s[scores={seconds=30}] ~ ~ ~ scoreboard players add @s question 1
+
+#After 5 questions, set up event
 tag @s[scores={seconds=30,question=6}] remove runquestion
 tag @s[scores={seconds=30,question=6}] add runevent
+tag @s[scores={seconds=30,question=6}] add eventintro
+
+#After 10 questions, set up outro
 tag @s[scores={seconds=30,question=11}] remove runquestion
-tag @s[scores={seconds=30,question=11}] add runevent
+
 execute @s[scores={seconds=30}] ~ ~ ~ scoreboard players set @s seconds 0
 execute @s[scores={seconds=30}] ~ ~ ~ scoreboard players add @s tick 0
 

@@ -198,7 +198,7 @@
 				}
 			}
 		},
-		"animation.wheel.pink": {
+		"animation.wheel.pink1": {
 			"animation_length": 32.04,
 			"bones": {
 				"wheel": {
@@ -281,7 +281,7 @@
 				}
 			}
 		},
-		"animation.wheel.red": {
+		"animation.wheel.red1": {
 			"animation_length": 36.4,
 			"bones": {
 				"wheel": {

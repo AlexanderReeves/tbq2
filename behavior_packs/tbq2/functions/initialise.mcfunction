@@ -62,8 +62,8 @@ scoreboard objectives add totalplayers dummy totalplayers
 scoreboard players set @e[tag=bob] totalplayers 0
 
 #Scoreboard to see how many seconds the wheel spins for
-scoreboard objectives add wheelseconds dummy wheelseconds
-scoreboard players set @e[type=tbq:wheel] wheelseconds -1
+scoreboard objectives add wheelresult dummy wheelresult
+scoreboard players set @e[tag=bob] wheelresult 0
 
 
 

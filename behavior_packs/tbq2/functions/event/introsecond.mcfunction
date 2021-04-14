@@ -8,3 +8,14 @@ execute @s[scores={seconds=12}] ~ ~ ~ function misc/wheelcentre
 execute @s[scores={seconds=12}] ~ ~ ~ tp @e[type=tbq:billagers] 130 28 -182 170 0
 execute @s[scores={seconds=13}] ~ ~ ~ title @a actionbar §aLet's The Mystery Wheel!
 
+#Start allowing teams to take turns at spinning the wheel
+execute @s[scores={seconds=16}] ~ ~ ~ tag @s remove eventintro
+execute @s[scores={seconds=16}] ~ ~ ~ tag @s add eventwheel
+execute @s[scores={seconds=16}] ~ ~ ~ tag @s add wheelgreen
+execute @s[scores={seconds=16}] ~ ~ ~ scoreboard players set @s tick 0
+execute @s[scores={seconds=16}] ~ ~ ~ scoreboard players set @s seconds 0
+
+
+
+
+
