@@ -35,6 +35,9 @@
 					"rotation": [0, -20, 0]
 				}
 			}
+		},
+		"animation.wheel.new": {
+			"loop": true
 		}
 	}
 }

@@ -17,7 +17,9 @@
       },
       "animations": {
 	      "convert": "animation.wheel.convertrotation",
-        "displayangle": "animation.wheel.displayangle"
+        "displayangle": "animation.wheel.displayangle",
+        "test": "animation.wheel.test"
+
       },
       "scripts": {
         "animate": [
