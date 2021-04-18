@@ -1,5 +1,7 @@
 #Move all to view board
 execute @s[scores={seconds=0..2}] ~ ~ ~ tp @a 147 28 -180 -35 -10
+execute @s[scores={seconds=0..1}] ~ ~ ~ effect @a invisibility 1 1 true
+
 
 
 #DOUBLE CHECK THESE VALUES

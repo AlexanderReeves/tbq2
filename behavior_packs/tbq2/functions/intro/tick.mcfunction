@@ -1,13 +1,19 @@
 #make players move with the camera,  and then make sure the player is facing the correct direction
 execute @s[scores={seconds=0..10}] ~ ~ ~ tp @a @e[type=tbq:camera,c=1,tag=viewstage]
+#make them face correct direction
 execute @s[scores={seconds=0..10}] ~ ~ ~ execute @a ~ ~ ~ tp @s ~ ~ ~ 0 -7
+#make invisible
+execute @s[scores={seconds=0..10}] ~ ~ ~ effect @a invisibility 1 1 true
 
 
-#Camera that moves in front of Bill
+#Drone/Camera that moves in front of Bill
 #tp players to camera, then make them face bill
-execute @s[scores={seconds=11..18}] ~ ~ ~ tp @a @e[type=tbq:camera,c=1,tag=viewbill]
+execute @s[scores={seconds=11..18}] ~ ~ ~ tp @a @e[type=tbq:drone,c=1,tag=viewbill]
+#Make players face correct direction
 execute @s[scores={seconds=11..18}] ~ ~ ~ execute @a ~ ~ ~ tp @s ~ ~ ~ 0 1
-#move camera backwards = need to have a second model which is a sky cam on string
+execute @s[scores={seconds=11..18}] ~ ~ ~ effect @a invisibility 1 1 true
+
+#move drone cam backwards
 execute @s[scores={seconds=11..16}] ~ ~ ~ execute @e[tag=viewbill] ~ ~ ~ tp @s ~ ~ ~-0.1
 
 #Make bill walk towards players
@@ -33,6 +39,12 @@ execute @s[scores={seconds=25..30}] ~ ~ ~ execute @a[tag=!yellow] ~ ~ ~ tp @s ~ 
 execute @s[scores={seconds=31..36}] ~ ~ ~ execute @a[tag=!green] ~ ~ ~ tp @s ~ ~ ~ 0 1
 execute @s[scores={seconds=37..42}] ~ ~ ~ execute @a[tag=!red] ~ ~ ~ tp @s ~ ~ ~ 0 1
 
+#Make players looking through camera invisible
+execute @s[scores={seconds=19..24}] ~ ~ ~ effect @a[tag=!blue] invisibility 1 1 true
+execute @s[scores={seconds=25..30}] ~ ~ ~ effect @a[tag=!yellow] invisibility 1 1 true
+execute @s[scores={seconds=31..36}] ~ ~ ~ effect @a[tag=!green] invisibility 1 1 true
+execute @s[scores={seconds=37..42}] ~ ~ ~ effect @a[tag=!red] invisibility 1 1 true
+
 
 #tp players to correct area ONCE when it is there turn(tag determines if they need to be tpd)
 execute @s[scores={seconds=10}] ~ ~ ~ tag @a remove moved
@@ -53,8 +65,10 @@ execute @s[scores={seconds=37..42}] ~ ~ ~ tag @a[tag=red,tag=!moved] add moved
 execute @s[scores={seconds=25}] ~ ~ ~ tag @a remove moved
 
 #TP players back to viewing Bill!
-execute @s[scores={seconds=43..60}] ~ ~ ~ tp @a @e[type=tbq:camera,c=1,tag=viewbill]
+execute @s[scores={seconds=43..60}] ~ ~ ~ tp @a @e[type=tbq:drone,c=1,tag=viewbill]
 execute @s[scores={seconds=43..60}] ~ ~ ~ execute @a ~ ~ ~ tp @s ~ ~ ~ 0 1
+execute @s[scores={seconds=43..60}] ~ ~ ~ effect @a invisibility 1 1 true
+
 
 #Set game to intro mode
 execute @s[scores={seconds=60}] ~ ~ ~ kill @e[type=tbq:logo]

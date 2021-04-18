@@ -1,0 +1,97 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.drone",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [0, 1.25, 0]
+			},
+			"bones": [
+				{
+					"name": "whole",
+					"pivot": [0, 0, 13]
+				},
+				{
+					"name": "base",
+					"parent": "whole",
+					"pivot": [0, 0, 13]
+				},
+				{
+					"name": "camera",
+					"parent": "base",
+					"pivot": [0, 0, 13],
+					"cubes": [
+						{"origin": [-2.5, 17, 4], "size": [5, 5, 13], "uv": [0, 46]},
+						{"origin": [-2.5, 21, 7], "size": [5, 2, 12], "uv": [30, 0]},
+						{"origin": [-5.5, 18, 11], "size": [3, 3, 1], "uv": [58, 60]}
+					]
+				},
+				{
+					"name": "poles",
+					"parent": "base",
+					"pivot": [0, 19, 11]
+				},
+				{
+					"name": "pole1",
+					"parent": "poles",
+					"pivot": [0, 22, 13],
+					"rotation": [0, 32.5, 0],
+					"cubes": [
+						{"origin": [-13, 22, 12], "size": [11, 3, 3], "uv": [0, 0]},
+						{"origin": [-12, 25, 13], "size": [1, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 17], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 9], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-9, 25, 10], "size": [1, 1, 7], "uv": [0, 0]},
+						{"origin": [-16, 25, 10], "size": [1, 1, 7], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "pole2",
+					"parent": "poles",
+					"pivot": [0, 22, 13],
+					"rotation": [0, 142.5, 0],
+					"cubes": [
+						{"origin": [-13, 22, 12], "size": [11, 3, 3], "uv": [0, 0]},
+						{"origin": [-12, 25, 13], "size": [1, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 17], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 9], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-9, 25, 10], "size": [1, 1, 7], "uv": [0, 0]},
+						{"origin": [-16, 25, 10], "size": [1, 1, 7], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "pole3",
+					"parent": "poles",
+					"pivot": [0, 22, 13],
+					"rotation": [0, -140, 0],
+					"cubes": [
+						{"origin": [-13, 22, 12], "size": [11, 3, 3], "uv": [0, 0]},
+						{"origin": [-12, 25, 13], "size": [1, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 17], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 9], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-9, 25, 10], "size": [1, 1, 7], "uv": [0, 0]},
+						{"origin": [-16, 25, 10], "size": [1, 1, 7], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "pole4",
+					"parent": "poles",
+					"pivot": [0, 22, 13],
+					"rotation": [0, -50, 0],
+					"cubes": [
+						{"origin": [-13, 22, 12], "size": [11, 3, 3], "uv": [0, 0]},
+						{"origin": [-12, 25, 13], "size": [1, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 17], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-15, 25, 9], "size": [6, 1, 1], "uv": [0, 0]},
+						{"origin": [-9, 25, 10], "size": [1, 1, 7], "uv": [0, 0]},
+						{"origin": [-16, 25, 10], "size": [1, 1, 7], "uv": [0, 0]}
+					]
+				}
+			]
+		}
+	]
+}

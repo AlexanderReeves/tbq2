@@ -25,9 +25,13 @@ kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193
 tag @e[type=tbq:camera,tag=!tagged] add viewstage
 tag @e[type=tbq:camera,tag=!tagged] add tagged
-summon tbq:camera 127 34 -152
-tag @e[type=tbq:camera,tag=!tagged] add viewbill
-tag @e[type=tbq:camera,tag=!tagged] add tagged
+
+#Drone camera
+kill @e[type=tbq:drone]
+
+summon tbq:drone 127 34 -152
+tag @e[type=tbq:drone,tag=!tagged] add viewbill
+tag @e[type=tbq:drone,tag=!tagged] add tagged
 
 
 #Buzzers
