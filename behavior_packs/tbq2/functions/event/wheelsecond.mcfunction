@@ -1,13 +1,11 @@
-#Check team validity
-execute @s[scores={seconds=0}] ~ ~ ~ function event/wheelteamcheck
 
-#Tp players who are allowed to spin the wheel to the stage
-execute @s[scores={seconds=0},tag=wheelgreen] ~ ~ ~ tp @a[tag=green] 125 28 -183 200 0
-execute @s[scores={seconds=0},tag=wheelred] ~ ~ ~ tp @a[tag=red] 125 28 -183 200 0
-execute @s[scores={seconds=0},tag=wheelyellow] ~ ~ ~ tp @a[tag=yellow] 125 28 -183 200 0
-execute @s[scores={seconds=0},tag=wheelblue] ~ ~ ~ tp @a[tag=blue] 125 28 -183 200 0
+#First thing to do before we run the wheel section of the game, is check that we have a valid team to spin the wheel
+#We also make sure players are in the correct area at this time
+execute @s[scores={seconds=0..}] ~ ~ ~ function event/wheelteamcheck
 
-#say whose turn it is to spin the wheel
+#This code will run its full cycle 4 times, once for each team!
+
+#say whose turn it is to spin the wheel/the team that was just teleported to main stage
 execute @s[scores={seconds=0},tag=wheelgreen] ~ ~ ~ title @a actionbar §aIt's your turn, Green team!
 execute @s[scores={seconds=0},tag=wheelred] ~ ~ ~ title @a actionbar §aIt's your turn, Red team!
 execute @s[scores={seconds=0},tag=wheelyellow] ~ ~ ~ title @a actionbar §aIt's your turn, Yellow team!

@@ -1,4 +1,9 @@
-#Event will run based on bobs tag
+#Events are now running The available events are
+#Intro event
+#Wheel event
+#Outro event
+
+#If bob has the tag EventIntro, he will run event code every second and every tick, same for the other cases
 execute @s[scores={tick=0},tag=eventintro] ~ ~ ~ function event/introsecond
 execute @s[tag=eventintro] ~ ~ ~ function event/introtick
 
@@ -6,14 +11,12 @@ execute @s[tag=eventintro] ~ ~ ~ function event/introtick
 execute @s[scores={tick=0},tag=eventwheel] ~ ~ ~ function event/wheelsecond
 execute @s[tag=eventwheel] ~ ~ ~ function event/wheeltick
 
+
+
 #outro runs once
-execute @s[scores={tick=0},tag=eventoutro] ~ ~ ~ function event/outrosecond
-execute @s[tag=eventoutro] ~ ~ ~ function event/outrotick
+#execute @s[scores={tick=0},tag=eventoutro] ~ ~ ~ function event/outrosecond
+#execute @s[tag=eventoutro] ~ ~ ~ function event/outrotick
 
 
-#Trigger wheel spin when lever pulled
-execute @e[type=item,name=torch] ~ ~ ~ execute @e[tag=bob] ~ ~ ~ function event/wheeltrigger
-execute @e[type=item,name=torch] ~ ~ ~ say wheel spun!
 
-kill @e[type=minecraft:item,name=torch]
 

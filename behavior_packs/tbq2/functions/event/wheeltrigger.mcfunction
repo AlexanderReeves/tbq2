@@ -22,5 +22,5 @@ execute @s[scores={wheelresult=18}] ~ ~ ~ playanimation @e[type=tbq:wheel] anima
 execute @s[scores={wheelresult=19}] ~ ~ ~ playanimation @e[type=tbq:wheel] animation.wheel.creeper1
 execute @s[scores={wheelresult=20}] ~ ~ ~ playanimation @e[type=tbq:wheel] animation.wheel.creeper2
 
-
+say wheeltrigger running
 
