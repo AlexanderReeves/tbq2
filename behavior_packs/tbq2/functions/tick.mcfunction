@@ -15,6 +15,7 @@ function misc/checkactiveteams
 
 #======================================
 
+
 #update the clock!
 scoreboard players add @s tick 1
 execute @s[scores={tick=20}] ~ ~ ~ function second

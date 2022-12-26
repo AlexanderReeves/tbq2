@@ -3,3 +3,4 @@ execute @e[tag=runevent,tag=bob] ~ ~ ~ function event/main
 execute @e[tag=runoutro,tag=bob] ~ ~ ~ function outro/main
 
 
+

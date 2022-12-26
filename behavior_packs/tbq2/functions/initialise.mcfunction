@@ -1,7 +1,8 @@
 #Check the code is loading
 tellraw @a {"rawtext":[{"text":"§a~~~§bThe Big Quiz 2 is initalising!§a~~~"}]}
-
-#Summon BOB, the squid who will run our game engine
+tickingarea add circle 127 29 -254 4 lobby true
+tickingarea add circle 127 34 -154 4 stage true
+#Summon BOB, the squid who will run our game engine, also make a command block so bob runs.
 kill @e[type=squid]
 summon minecraft:squid 127 26 -229
 tag @e[type=minecraft:squid] add bob
@@ -30,9 +31,12 @@ scoreboard players set @e[tag=bob] redplayers 0
 scoreboard players set @e[tag=bob] blueplayers 0
 scoreboard players set @e[tag=bob] yellowplayers 0
 
+#Scoreboard to know how many questions have been asked
+scoreboard objectives add question dummy question
+scoreboard players set @e[tag=bob] question 1
 #Scoreboard to pick which random question will be used (Question ID)
 scoreboard objectives add qid dummy qid
-scoreboard players set @e[tag=bob] quid 0
+scoreboard players set @e[tag=bob] qid 0
 #Scoreboard to pick which question category will be used (Question category)
 scoreboard objectives add qcat dummy qcat
 scoreboard players set @e[tag=bob] qcat 0
@@ -61,9 +65,23 @@ scoreboard players set @e[tag=bob] quitvote 0
 scoreboard objectives add totalplayers dummy totalplayers
 scoreboard players set @e[tag=bob] totalplayers 0
 
+
+#Summon wheel entity
+kill @e[type=tbq:wheel]
+summon tbq:wheel 138.30 28.00 -164.82
+execute @e[type=tbq:wheel] ~ ~ ~ tp @s ~ ~ ~ -25
 #Scoreboard to see how many seconds the wheel spins for
 scoreboard objectives add wheelresult dummy wheelresult
 scoreboard players set @e[tag=bob] wheelresult 0
+scoreboard objectives add wheelspintime dummy wheelspintime
+scoreboard players set @e[tag=bob] wheelspintime 0
+
+#Scoreboard to run chaos events as a result of the random wheel event result
+#ChaosRemainingSeconds tell how long misc/backgroundchaos will run, ChaosID tells which chaos should run at the current time.
+scoreboard objectives add chaosremseconds dummy chaosremseconds
+scoreboard players set @e[tag=bob] chaosremseconds 0
+scoreboard objectives add activechaosid dummy activechaosid
+scoreboard players set @e[tag=bob] activechaosid 0
 
 
 

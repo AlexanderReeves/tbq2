@@ -33,9 +33,6 @@ scoreboard players add @s[tag=greencorrect,scores={question=1..5}] greenscore 10
 scoreboard players add @s[tag=greencorrect,scores={question=6..11}] greenscore 150
 scoreboard players remove @s[tag=!greencorrect,scores={question=6..11}] greenscore 100
 
-
-
-
 #Update the displays with new score from backend
 #remove old score
 scoreboard players set "§bBlue " scoredisplay 0

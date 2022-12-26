@@ -7,8 +7,8 @@
         "default": "skeleton"
       },
       "textures": {
-
-        "default": "textures/entity/billagers"
+        "suit": "textures/entity/billagers",
+        "farmer": "textures/entity/billagersfarm" 
       },
       "geometry": {
         "default": "geometry.billagers"

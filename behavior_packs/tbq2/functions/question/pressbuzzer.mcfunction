@@ -1,9 +1,10 @@
 #RESPOND TO A BUZZER PRESS
+#This code should only run between allowed times
 #check which answer was locked in and set player scores
 
 #QUESTION 1
 #BLUE
-#          ANY LEAD FROM PRESS                   FIND CLOSEST BUZZER               IF BLUE                        SET SCORE FOR BLUE PLAYERS
+#          ANY LEAD FROM PRESS                   FIND CLOSEST BUZZER     BLUE TEAM BUZZERS ARE NUMBERED    CLOSEST WILL SET ANSWER NUMBER FOR THE TEAM
 execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b1] ~ ~ ~ scoreboard players set @a[tag=blue] answer 1
 execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b2] ~ ~ ~ scoreboard players set @a[tag=blue] answer 2
 execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b3] ~ ~ ~ scoreboard players set @a[tag=blue] answer 3

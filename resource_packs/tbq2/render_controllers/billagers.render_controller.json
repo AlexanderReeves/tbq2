@@ -4,10 +4,16 @@
       "controller.render.billagers": {
         "geometry": "Geometry.default",
         "materials": [  {  "*": "Material.default"   } ],
-         "textures": [ "Texture.default" ],
-        "part_visibility" : [
-          { "*": true }
-        ]
+        "arrays": {
+          "textures": {
+            "Array.skins": [
+              "Texture.suit",
+              "Texture.farmer"
+            ]
+          }
+        },
+        "textures": [ "query.get_equipped_item_name == 'diamond_sword' ? Array.skins[1] : (query.get_equipped_item_name == 'iron_sword' ? Array.skins[0] : Array.skins[0])"],
+        "part_visibility" : [{ "*": true } ]
       }
     }
   }

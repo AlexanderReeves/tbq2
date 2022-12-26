@@ -9,3 +9,4 @@ execute @s[scores={seconds=13..20}] ~ ~ ~ effect @a invisibility 1 1 true
 
 
 
+say introtick running
