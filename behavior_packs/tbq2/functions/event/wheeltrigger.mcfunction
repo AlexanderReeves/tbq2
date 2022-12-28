@@ -49,6 +49,7 @@ execute @s[scores={wheelresult=20}] ~ ~ ~ scoreboard players set @s wheelspintim
 #Once the wheel starts to spin, the timer moves on to the 25 second mark automatically.
 scoreboard players set @s seconds 30
 
+
 #Diagnosisn incorrect spin animation
 execute @s[scores={wheelresult=1}] ~ ~ ~ say score 1, blue, 100
 execute @s[scores={wheelresult=2}] ~ ~ ~ say score 2, blue, 100
@@ -70,5 +71,8 @@ execute @s[scores={wheelresult=17}] ~ ~ ~ say score 17, oran, -50
 execute @s[scores={wheelresult=18}] ~ ~ ~ say score 18, oran, -50
 execute @s[scores={wheelresult=19}] ~ ~ ~ say score 19, cree, 50
 execute @s[scores={wheelresult=20}] ~ ~ ~ say score 20, cree, 50
+
+=======
+
 
 

@@ -2,9 +2,13 @@
 #First thing to do before we run the wheel section of the game, is check that we have a valid team to spin the wheel
 #We also make sure players are in the correct area at this time
 execute @s[scores={seconds=0..}] ~ ~ ~ function event/wheelteamcheck
+
 scoreboard players set @s[scores={seconds=0}] wheelspintime 0
 scoreboard players set @s[scores={seconds=0}] wheelresult 0
 execute @s[scores={seconds=0}] ~ ~ ~ title @a times 0 5 20
+
+
+
 
 
 #This code will run its full cycle 4 times, once for each team!
