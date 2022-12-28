@@ -15,7 +15,7 @@ execute @s[scores={seconds=0..15}] ~ ~ ~ execute @e[type=item,name=torch] ~ ~ ~ 
 execute @s[scores={seconds=0..15}] ~ ~ ~ execute @e[type=item,name=torch] ~ ~ ~ say wheel spun!
 #Delete the torch
 kill @e[type=minecraft:item,name=torch]
-=======
+
 execute @s[scores={seconds=0..},tag=wheelgreen] ~ ~ ~ tp @a[tag=!green] @e[type=tbq:camera,c=1,tag=viewstage]
 execute @s[scores={seconds=0..},tag=wheelred] ~ ~ ~ tp @a[tag=!red] @e[type=tbq:camera,c=1,tag=viewstage]
 execute @s[scores={seconds=0..},tag=wheelyellow] ~ ~ ~ tp @a[tag=!yellow] @e[type=tbq:camera,c=1,tag=viewstage]

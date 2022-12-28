@@ -72,7 +72,6 @@ execute @s[scores={wheelresult=18}] ~ ~ ~ say score 18, oran, -50
 execute @s[scores={wheelresult=19}] ~ ~ ~ say score 19, cree, 50
 execute @s[scores={wheelresult=20}] ~ ~ ~ say score 20, cree, 50
 
-=======
 
 
 

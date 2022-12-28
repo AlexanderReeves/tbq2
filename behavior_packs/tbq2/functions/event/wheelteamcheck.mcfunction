@@ -3,7 +3,7 @@
 
 
 #SKIP GREEN IF NO GREEN PLAYERS
-=======
+
 #SKIP TO NEXT TEAM IF TEAM IS NOT PLAYING
 say running team check
 
@@ -62,7 +62,7 @@ execute @s[tag=wheelred,tag=teamvalid] ~ ~ ~ execute @a[tag=red,tag=!validplayer
 execute @s[tag=wheelred,tag=teamvalid] ~ ~ ~ tag @a[tag=!red, x=93, y=25, z=-199, dx=70, dy=20, dz=-20] add validplayerarea
 execute @s[tag=wheelred,tag=teamvalid] ~ ~ ~ execute @a[tag=!red,tag=!validplayerarea] ~ ~ ~ tellraw @s {"rawtext":[{"text":"§e§oYou have been moved back to the correct area because you tried to run away!"}]} 
 execute @s[tag=wheelred,tag=teamvalid] ~ ~ ~ execute @a[tag=!red,tag=!validplayerarea] ~ ~ ~ tp @s 114 28 -210
-=======
+
 #If bob wants a green player to spin the wheel, he will look to see if there are any players who are tagged as green, that player will validate bob
 execute @s[tag=wheelgreen] ~ ~ ~ execute @a[tag=green] ~ ~ ~ tag @e[tag=bob] add teamvalid
 #we have a valid green team playing, let's make sure everyone is in a valid location!
@@ -98,7 +98,7 @@ execute @e[tag=bob,tag=wheelred,tag=!teamvalid] ~ ~ ~ tag @s remove wheelred
 execute @s[tag=wheelyellow] ~ ~ ~ execute @a[tag=yellow] ~ ~ ~ tag @e[tag=bob] add teamvalid
 execute @e[tag=bob,tag=wheelyellow,tag=!teamvalid] ~ ~ ~ tag @s add wheelblue
 execute @e[tag=bob,tag=wheelyellow,tag=!teamvalid] ~ ~ ~ tag @s remove wheelyellow
->>>>>>> 00749e3df8d6fb636da47fd3e8a0becbf49683ea
+
 
 #IF no red players left in red, switch to validating the red team.
 scoreboard players set @e[tag=bob,tag=wheelred,tag=!teamvalid] seconds 0
