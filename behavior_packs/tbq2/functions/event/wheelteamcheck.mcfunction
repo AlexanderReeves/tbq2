@@ -162,7 +162,7 @@ execute @e[tag=bob,tag=wheelyellow,tag=!teamvalid] ~ ~ ~ tag @s remove wheelyell
 execute @s[tag=!teamvalid] ~ ~ ~ say no teams left to spin the wheel, moving onto event outro
 execute @s[tag=!teamvalid] ~ ~ ~ tag @s add eventoutro
 execute @s[tag=!teamvalid] ~ ~ ~ tag @s remove eventwheel
-=======
+
 execute @e[tag=bob,tag=wheelblue,tag=!teamvalid] ~ ~ ~ tag @s remove wheelblue
 
 
