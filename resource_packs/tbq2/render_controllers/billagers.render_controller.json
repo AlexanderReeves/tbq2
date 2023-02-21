@@ -12,7 +12,7 @@
             ]
           }
         },
-        "textures": [ "query.get_equipped_item_name == 'diamond_sword' ? Array.skins[1] : (query.get_equipped_item_name == 'iron_sword' ? Array.skins[0] : Array.skins[0])"],
+        "textures": [ "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:iron_sword') ? Array.skins[1] : Array.skins[0]"],
         "part_visibility" : [{ "*": true } ]
       }
     }

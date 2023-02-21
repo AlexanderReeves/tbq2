@@ -15,17 +15,9 @@
       "geometry": {
         "default": "geometry.wheel"
       },
-      "animations": {
-	      "convert": "animation.wheel.convertrotation",
-        "displayangle": "animation.wheel.displayangle",
-        "test": "animation.wheel.test"
 
-      },
       "scripts": {
-        "animate": [
-          "convert",
-          { "displayangle": "query.get_equipped_item_name == 'diamond_sword'" }
-        ] 
+
         },
       "render_controllers": ["controller.render.wheel"],
       "spawn_egg": {

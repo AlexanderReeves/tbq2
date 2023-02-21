@@ -10,7 +10,9 @@ tag @e[type=minecraft:squid] add bob
 tag @e[type=minecraft:squid] add hidebar
 
 #--------------SET UP SCOREBOARDS-------
+#Rest scores to defaults where neccessary from previous loads of the game
 #ticker (20 times per second)
+scoreboard players reset @e tick
 scoreboard objectives add tick dummy tick
 scoreboard players set @e[tag=bob] tick 0
 #seconds
@@ -69,7 +71,7 @@ scoreboard players set @e[tag=bob] totalplayers 0
 #Summon wheel entity
 kill @e[type=tbq:wheel]
 summon tbq:wheel 138.30 28.00 -164.82
-execute @e[type=tbq:wheel] ~ ~ ~ tp @s ~ ~ ~ -25
+execute as @e[type=tbq:wheel] at @s positioned ~ ~ ~ run teleport @s ~ ~ ~ -25
 #Scoreboard to see how many seconds the wheel spins for
 scoreboard objectives add wheelresult dummy wheelresult
 scoreboard players set @e[tag=bob] wheelresult 0
