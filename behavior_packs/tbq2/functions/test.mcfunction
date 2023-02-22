@@ -1,1 +1,0 @@
-execute as @e[tag=bob] run say hi
