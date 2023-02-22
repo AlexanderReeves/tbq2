@@ -2,15 +2,14 @@
 #say team selection running
 
 #Join red team
-execute as @p at @s positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tellraw @s {"rawtext":[{"text":"§cYou have joined the red team!"}]}
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tellraw @s {"rawtext":[{"text":"§cYou have joined the red team!"}]}
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tag @s remove blue
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tag @s remove yellow
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tag @s remove green
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tag @s remove spectator
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 playsound block.end_portal_frame.fill @s
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 particle minecraft:totem_particle ~ ~1 ~
-#execute as @a[tag=!red] ~ ~ ~ detect ~ ~-1 ~ concrete 14 tag @s add red
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tellraw @s {"rawtext":[{"text":"§cYou have joined the red team!"}]}
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tag @s remove blue
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tag @s remove yellow
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tag @s remove green
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tag @s remove spectator
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run playsound block.end_portal_frame.fill @s
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run particle minecraft:totem_particle ~ ~1 ~
+execute as @p at @s[tag=!red] positioned ~ ~-1 ~ run execute if block ~ ~ ~ concrete 14 run tag @s add red
 
 #Join blue team
 #execute as @a[tag=!blue] ~ ~ ~ detect ~ ~-1 ~ concrete 3 tellraw @s {"rawtext":[{"text":"§bYou have joined the blue team!"}]}
