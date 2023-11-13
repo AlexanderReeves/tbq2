@@ -10,7 +10,7 @@ scoreboard players set "§bBlue " scoredisplay 0
 scoreboard players set "§cRed " scoredisplay 0
 scoreboard players set "§gYellow " scoredisplay 0
 scoreboard players set "§aGreen " scoredisplay 0
-function question/hideteams
+function question/hideteamscores
 scoreboard objectives setdisplay sidebar scoredisplay
 
 scoreboard players set @s quitvote 0
