@@ -1,4 +1,4 @@
-#Hide scores of inactive teams
+#Hide scores of teams with no players
 tag @s add hideblue
 tag @s add hidered
 tag @s add hideyellow
