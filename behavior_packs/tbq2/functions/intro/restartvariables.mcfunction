@@ -4,12 +4,15 @@ scoreboard players set @s redscore 0
 scoreboard players set @s yellowscore 0
 scoreboard players set @s greenscore 0
 
+#As the game is starting, all teams should have a visible score of 0
 scoreboard objectives remove scoredisplay
 scoreboard objectives add scoredisplay dummy Points
 scoreboard players set "§bBlue " scoredisplay 0
 scoreboard players set "§cRed " scoredisplay 0
 scoreboard players set "§gYellow " scoredisplay 0
 scoreboard players set "§aGreen " scoredisplay 0
+
+#For teams with no players, remove that team from the scoreboard display as it is not needed.
 function question/hideteamscores
 scoreboard objectives setdisplay sidebar scoredisplay
 
