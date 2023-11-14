@@ -15,10 +15,36 @@
       "geometry": {
         "default": "geometry.wheel"
       },
+      "animations": {
+        "spin": "animation.wheel.spin"
+      },
 
       "scripts": {
+        "initialize": [
+          "variable.test = 1000;",
+          "variable.finalrotation = 0;"
+        ],
+        "pre_animation": [
+          //spin speed, starts at a number determined by the helmet slot
+          //(when gold helm, or 1200 when iron helm, or, 1400 when diamond helm etc
+          //)
+          //remove item on the next tick so the variable can reduce to 0
+          //"variable.test= (variable.test >=500) ? variable.test-0.2: variable.test;",
+          //"variable.test= (variable.test >=200) ? variable.test-0.2: variable.test;",
+          //"variable.test= (variable.test >=75) ? variable.test-0.1: variable.test;",
+          //"variable.test= (variable.test >=1) ? variable.test-0.1: variable.test;",
+          "variable.test= (variable.test >=1) ? variable.test*0.995: variable.test;",
 
-        },
+          //the wheel stops spinning with a prize determined by the held item in mainhand
+          "variable.finalrotation = (query.is_item_name_any('slot.weapon.mainhand',1,'minecraft:iron_shovel')) ? 50 : 0;",
+
+          "variable.test = (query.is_item_name_any('slot.armor.head',1,'minecraft:golden_helmet')) ? 700 : variable.test;"
+        ], 
+        "animate": [
+            "spin"
+          ]
+
+      },
       "render_controllers": ["controller.render.wheel"],
       "spawn_egg": {
         "base_color": "#000000",
