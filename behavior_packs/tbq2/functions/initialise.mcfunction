@@ -85,6 +85,12 @@ scoreboard players set @e[tag=bob] chaosremseconds 0
 scoreboard objectives add activechaosid dummy activechaosid
 scoreboard players set @e[tag=bob] activechaosid 0
 
+#scoreboard to enable or disable testing features like overriding the scoreboard display.
+#THIS SHOULD BE 0 WHEN NOT TESTING, BUT WE DON'T WANT IT TO OVERWRITE THE CURRENT VALUE WHEN INITIALISING AS IT SHOULD BE DONE MANUALLY
+#scoreboard objectives remove istesting
+#scoreboard objectives add istesting dummy istesting
+#scoreboard players set @e[tag=bob] istesting 0
+
 
 
 #gamestate

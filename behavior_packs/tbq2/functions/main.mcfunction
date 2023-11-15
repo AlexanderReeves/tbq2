@@ -1,5 +1,6 @@
 
 #----MAIN CODE------
+#*UPDATED TO NEW LANGUAGE*
 #THIS code is the MAIN function file, Most code is run from here
 #It provides a way to set the order that the other functions will be called
 
@@ -8,10 +9,12 @@
 
 
 #=======UPDATE IMPORTANT MISC VARIABLES!!!!======
-#check the number of active players
-#function misc/checktotalplayers
+#check the number of active players who are in a team and ready to play
+function misc/checktotalplayers
 #Check which teams are active!
 #function misc/checkactiveteams
+#Make sure that all players are legal
+#function misc/validateplayers
 #======================================
 
 

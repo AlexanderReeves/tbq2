@@ -1,31 +1,32 @@
 #RESPOND TO A BUZZER PRESS
+#*UPDATED TO NEW FORMAT, NEEDS SOME MORE TESTING*
 #This code should only run between allowed times
 #check which answer was locked in and set player scores
 
 #QUESTION 1
 #BLUE
 #          ANY LEAD FROM PRESS                   FIND CLOSEST BUZZER     BLUE TEAM BUZZERS ARE NUMBERED    CLOSEST WILL SET ANSWER NUMBER FOR THE TEAM
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b1] ~ ~ ~ scoreboard players set @a[tag=blue] answer 1
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b2] ~ ~ ~ scoreboard players set @a[tag=blue] answer 2
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=b3] ~ ~ ~ scoreboard players set @a[tag=blue] answer 3
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=b1] run scoreboard players set @a[tag=blue] answer 1
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=b2] run scoreboard players set @a[tag=blue] answer 2
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=b3] run scoreboard players set @a[tag=blue] answer 3
 #YELLOW
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=y1] ~ ~ ~ scoreboard players set @a[tag=yellow] answer 1
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=y2] ~ ~ ~ scoreboard players set @a[tag=yellow] answer 2
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=y3] ~ ~ ~ scoreboard players set @a[tag=yellow] answer 3
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=y1] run scoreboard players set @a[tag=yellow] answer 1
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=y2] run scoreboard players set @a[tag=yellow] answer 2
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=y3] run scoreboard players set @a[tag=yellow] answer 3
 #GREEN
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=g1] ~ ~ ~ scoreboard players set @a[tag=green] answer 1
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=g2] ~ ~ ~ scoreboard players set @a[tag=green] answer 2
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=g3] ~ ~ ~ scoreboard players set @a[tag=green] answer 3
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=g1] run scoreboard players set @a[tag=green] answer 1
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=g2] run scoreboard players set @a[tag=green] answer 2
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=g3] run scoreboard players set @a[tag=green] answer 3
 #RED
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=r1] ~ ~ ~ scoreboard players set @a[tag=red] answer 1
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=r2] ~ ~ ~ scoreboard players set @a[tag=red] answer 2
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ execute @s[tag=r3] ~ ~ ~ scoreboard players set @a[tag=red] answer 3
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=r1] run scoreboard players set @a[tag=red] answer 1
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=r2] run scoreboard players set @a[tag=red] answer 2
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run execute as @s[tag=r3] run scoreboard players set @a[tag=red] answer 3
 
 
 
 #When buzzer is pressed it releases bonemeal     get closest buzzer    show players what they chose and run animation
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[tag=bob] ~ ~ ~ function question/ansactionbar
-execute @e[type=item,name=lead] ~ ~ ~ execute @e[type=tbq:buzzer,c=1] ~ ~ ~ playanimation @s animation.buzzer.press
+execute as @e[type=item,name=lead] run execute as @e[tag=bob] run function question/ansactionbar
+execute as @e[type=item,name=lead] at @s run execute as @e[type=tbq:buzzer,c=1] run playanimation @s animation.buzzer.press
 
 #Remove old lead
 kill @e[type=item,name=lead]

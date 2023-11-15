@@ -1,23 +1,24 @@
 #tell players if they were correct via actionbar, increase score
-
+#*UPDATED TO NEW FORMAT*
 #assume all players are incorrect
+say checking answers
 tag @a remove correct
 
 #replace incorrect message instantly for players with correct answer
 #Compare player answers to correct answer
-execute @s[scores={correctanswer=1}] ~ ~ ~ tag @a[scores={answer=1}] add correct
-execute @s[scores={correctanswer=2}] ~ ~ ~ tag @a[scores={answer=2}] add correct
-execute @s[scores={correctanswer=3}] ~ ~ ~ tag @a[scores={answer=3}] add correct
+execute as @s[scores={correctanswer=1}] run tag @a[scores={answer=1}] add correct
+execute as @s[scores={correctanswer=2}] run tag @a[scores={answer=2}] add correct
+execute as @s[scores={correctanswer=3}] run tag @a[scores={answer=3}] add correct
 
 #Increase scores via tagging bob with teams that were correct=========================
 tag @e[tag=bob] remove bluecorrect
 tag @e[tag=bob] remove redcorrect
 tag @e[tag=bob] remove yellowcorrect
 tag @e[tag=bob] remove greencorrect
-execute @a[tag=correct,tag=blue] ~ ~ ~ tag @e[tag=bob] add bluecorrect
-execute @a[tag=correct,tag=red] ~ ~ ~ tag @e[tag=bob] add redcorrect
-execute @a[tag=correct,tag=yellow] ~ ~ ~ tag @e[tag=bob] add yellowcorrect
-execute @a[tag=correct,tag=green] ~ ~ ~ tag @e[tag=bob] add greencorrect
+execute as @a[tag=correct,tag=blue] run tag @e[tag=bob] add bluecorrect
+execute as @a[tag=correct,tag=red] run tag @e[tag=bob] add redcorrect
+execute as @a[tag=correct,tag=yellow] run tag @e[tag=bob] add yellowcorrect
+execute as @a[tag=correct,tag=green] run tag @e[tag=bob] add greencorrect
 
 #Increase score on hidden board
 scoreboard players add @s[tag=bluecorrect,scores={question=1..5}] bluescore 100
@@ -52,7 +53,7 @@ function question/hideteams
 
 
 #Tell players if they were correct
-execute @s[scores={question=1..5}] ~ ~ ~ title @a[tag=correct] actionbar §aCorrect! §g+100
-execute @s[scores={question=1..5}] ~ ~ ~ title @a[tag=!correct] actionbar §cIncorrect!
-execute @s[scores={question=6..11}] ~ ~ ~ title @a[tag=correct] actionbar §aCorrect! §g+150
-execute @s[scores={question=6..11}] ~ ~ ~ title @a[tag=!correct] actionbar §cIncorrect! §c-50
+execute as @s[scores={question=1..5}] run title @a[tag=correct] actionbar §aCorrect! §g+100
+execute as @s[scores={question=1..5}] run title @a[tag=!correct] actionbar §cIncorrect!
+execute as @s[scores={question=6..11}] run title @a[tag=correct] actionbar §aCorrect! §g+150
+execute as @s[scores={question=6..11}] run title @a[tag=!correct] actionbar §cIncorrect! §c-50
