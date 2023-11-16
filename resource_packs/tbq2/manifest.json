@@ -5,7 +5,7 @@
     "name": "pack.name",
     "uuid": "756e2aa3-abe2-4e43-9e71-0d38b4247e01",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 16, 100]
+    "min_engine_version": [1, 20, 41]
   },
   "modules": [
     {
@@ -13,5 +13,15 @@
       "uuid": "491365ae-e579-4764-aae7-401cf04c0c32",
       "version": [1, 0, 0]
     }
+  ],
+  "dependencies":
+  [
+
+   {
+    // Enables the use of @minecraft/server-ui module
+    "module_name": "@minecraft/server-ui",
+    "version": "1.1.0"
+    }
+  
   ]
 }

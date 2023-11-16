@@ -1,0 +1,142 @@
+{
+	"namespace": "hud",
+	//WORKING COPY, NO AUTOMATIONS
+	"clouds_image": {
+		"type": "image",
+		"texture": "textures/ui/Black",
+		"size": [40,40],
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [0,5]
+	},
+
+	"answerstext1": {
+		"type": "label",
+		"$mytext1" : "A) Answer One.",
+		"text" : "$mytext1",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [0,5],
+		"grid_position" : [0,0]
+	},
+	"answerstext2": {
+		"type": "label",
+		"$mytext2" : "B) Answer 2.",
+		"text" : "$mytext2",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [0,5],
+		"grid_position" : [0,1]
+	},
+	"answerstext3": {
+		"type": "label",
+		"$mytext3" : "C) Answer 3.",
+		"text" : "$mytext3",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [0,5],
+		"grid_position" : [1,0]
+	},
+	"answerstext4": {
+		"type": "label",
+		"$mytext4" : "D) Answer 4.",
+		"text" : "$mytext4",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"offset": [0,5],
+		"grid_position" : [1,1]
+	},
+	"answer_grid" : {
+		"type" : "grid",
+		"grid_dimensions" : [2,2],
+		"size": [ "50%", "default" ],
+		"anchor_to": "center",
+    	"anchor_from": "center",
+    	"controls" :[
+    		{"answerstext1@hud.answerstext1" : {} },
+    		{"answerstext2@hud.answerstext2" : {} },
+    		{"answerstext3@hud.answerstext3" : {} },
+    		{"answerstext4@hud.answerstext4" : {} }
+    	]
+	},
+
+	"some_text": {
+		"type" : "text",
+		"text" : "grid element one!",
+		"anchor_from": "center",
+		"anchor_to": "center",
+		"grid_position" : [0,0]
+	},
+
+
+
+	//==============================TITLE TO SCREEN TEXT=====================
+	"preserved_title_display": {
+		"$update_string": "update",   // title must include this string to update the element
+
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#text",
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text) and not ((#hud_title_text_string - $update_string) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text - $update_string)",   // remove string update text from the text to be displayed
+				"target_property_name": "#text"
+			}
+		]
+	},
+
+
+	//==============================LOAD ELEMENTS ONTO ROOT OF PAGE
+	"root_panel": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+						//{"clouds_image@hud.clouds_image": {}	},
+
+						//{"answerstext@hud.answerstext": {}	},
+						{"preserved_title_display@hud.preserved_title_display": {}	},
+						{"answer_grid@hud.answer_grid": {}	}
+				]
+			}
+		]
+	}
+
+
+
+}

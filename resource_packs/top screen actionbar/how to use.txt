@@ -1,0 +1,16 @@
+para usar apenas escreva seu texto apos os prefixos
+
+prefixos:
+
+"Text-sidebar_0", 
+"Text-sidebar_1",
+"Text-sidebar_2"
+
+e use o comando
+
+/title "nome de usuário" title #prefixo + #seu texto
+
+EX:
+
+to put text in the final textbar
+/title @s title Text-sidebar_2 test3
