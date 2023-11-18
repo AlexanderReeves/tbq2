@@ -55,9 +55,7 @@
 	"some_text": {
 		"type" : "label",
 		"offset": ["0%x",0],
-		"text" : "This is some text."//,
-		//"anchor_from": "center",
-		//"anchor_to": "center"
+		"text" : "This is some text."
 	},
 
 	"answer_image": {
@@ -65,9 +63,22 @@
 		"texture": "textures/ui/answerpanel",
 		"size": ["50%", "50%"],
 		"anchor_to": "bottom_middle",
+    	//"visible" : false,
 		"controls" : [
 			//{"some_text@hud.some_text" : {} }//
 			{"preserved_title_display@hud.preserved_title_display" : {} }
+		],
+		"bindings": [
+			// element becomes visible then immediately turns invisible when a title containing the update string is passed
+			{
+				"binding_name": "#hud_title_text_string"      // reads in the current title string
+			},
+			{	
+				//view visible or invisible based on wether the word update appeared
+				"binding_type": "view",
+				"source_property_name": "(#hud_title_text_string = 'test')",
+				"target_property_name": "#visible"
+			}
 		]
 		
 	},
@@ -84,6 +95,7 @@
 
 	//Answer grid containing images
 	"answer_grid_images" : {
+		"$update_string": "showgrid",   // title must include this string to update the element
 		"type" : "grid",
 		"grid_dimensions" : [2,2],
 		"size": [ "50%", "20%" ],
@@ -106,9 +118,12 @@
     	]
 	},
 
+
 	"exp_progress_bar_and_hotbar": {"ignored" : true},
 	"heart_renderer": { "ignored": true },
 	"hunger_renderer": { "ignored": true },
+
+
 
 
 	//==============================LOAD ELEMENTS ONTO ROOT OF PAGE
