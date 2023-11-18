@@ -51,47 +51,290 @@
 			}
 		]
 	},
+//=================================OPTION 1 PANEL================
+	"option_1_text": {
+		"$update_string_1": "option1",   // title must include this string to update the element
 
-	"some_text": {
-		"type" : "label",
-		"offset": ["0%x",0],
-		"text" : "This is some text."
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#text1",
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control_1": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text_1",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text_1) and not ((#hud_title_text_string - $update_string_1) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control_1",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text_1 - $update_string_1)",   // remove string update text from the text to be displayed
+				"target_property_name": "#text1"
+			}
+		]
 	},
 
-	"answer_image": {
+
+	"answer_image_1": {
 		"type": "image",
 		"texture": "textures/ui/answerpanel",
 		"size": ["50%", "50%"],
 		"anchor_to": "bottom_middle",
     	//"visible" : false,
 		"controls" : [
-			//{"some_text@hud.some_text" : {} }//
-			{"preserved_title_display@hud.preserved_title_display" : {} }
-		],
-		"bindings": [
-			// element becomes visible then immediately turns invisible when a title containing the update string is passed
-			{
-				"binding_name": "#hud_title_text_string"      // reads in the current title string
-			},
-			{	
-				//view visible or invisible based on wether the word update appeared
-				"binding_type": "view",
-				"source_property_name": "(#hud_title_text_string = 'test')",
-				"target_property_name": "#visible"
-			}
+			{"option_1_text@hud.option_1_text" : {} }
 		]
 		
 	},
 
 	//4 of these panels, that each contain an image
-	"answer_panel_image" : {
+	"answer_panel_1" : {
 		"type" : "panel",
 		"size" :["100%","100%"],
 		"controls" : [
-			{"answer_image@hud.answer_image" : {} }
+			{"answer_image_1@hud.answer_image_1" : {} }
+		]
+	},
+//==========================================END OPTION 1 PANEL==============
+//=======================================OPTION 2 PANEL START===================
+	"option_2_text": {
+		"$update_string_2": "option2",   // title must include this string to update the element
+
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#text2",
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control_2": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text_2",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text_2) and not ((#hud_title_text_string - $update_string_2) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control_2",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text_2 - $update_string_2)",   // remove string update text from the text to be displayed
+				"target_property_name": "#text2"
+			}
 		]
 	},
 
+
+	"answer_image_2": {
+		"type": "image",
+		"texture": "textures/ui/answerpanel",
+		"size": ["50%", "50%"],
+		"anchor_to": "bottom_middle",
+    	//"visible" : false,
+		"controls" : [
+			{"option_2_text@hud.option_2_text" : {} }
+		]
+		
+	},
+
+	//4 of these panels, that each contain an image
+	"answer_panel_2" : {
+		"type" : "panel",
+		"size" :["100%","100%"],
+		"controls" : [
+			{"answer_image_2@hud.answer_image_2" : {} }
+		]
+	},
+//==============================================END OPTION 2 PANEL==========
+//=======================================OPTION 3 PANEL START===================
+	"option_3_text": {
+		"$update_string_3": "option3",   // title must include this string to update the element
+
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#text3",
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control_3": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text_3",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text_3) and not ((#hud_title_text_string - $update_string_3) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control_3",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text_3 - $update_string_3)",   // remove string update text from the text to be displayed
+				"target_property_name": "#text3"
+			}
+		]
+	},
+
+
+	"answer_image_3": {
+		"type": "image",
+		"texture": "textures/ui/answerpanel",
+		"size": ["50%", "50%"],
+		"anchor_to": "bottom_middle",
+    	//"visible" : false,
+		"controls" : [
+			{"option_3_text@hud.option_3_text" : {} }
+		]
+		
+	},
+
+	//4 of these panels, that each contain an image
+	"answer_panel_3" : {
+		"type" : "panel",
+		"size" :["100%","100%"],
+		"controls" : [
+			{"answer_image_3@hud.answer_image_3" : {} }
+		]
+	},
+//==============================================END OPTION 3 PANEL==========
+//=======================================OPTION 4 PANEL START===================
+	"option_4_text": {
+		"$update_string_4": "option4",   // title must include this string to update the element
+
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#text4",
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control_4": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text_4",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text_4) and not ((#hud_title_text_string - $update_string_4) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control_4",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text_4 - $update_string_4)",   // remove string update text from the text to be displayed
+				"target_property_name": "#text4"
+			}
+		]
+	},
+
+
+	"answer_image_4": {
+		"type": "image",
+		"texture": "textures/ui/answerpanel",
+		"size": ["50%", "50%"],
+		"anchor_to": "bottom_middle",
+    	//"visible" : false,
+		"controls" : [
+			{"option_4_text@hud.option_4_text" : {} }
+		]
+		
+	},
+
+	//4 of these panels, that each contain an image
+	"answer_panel_4" : {
+		"type" : "panel",
+		"size" :["100%","100%"],
+		"controls" : [
+			{"answer_image_4@hud.answer_image_4" : {} }
+		]
+	},
+//==============================================END OPTION 4 PANEL==========
 
 	//Answer grid containing images
 	"answer_grid_images" : {
@@ -103,25 +346,38 @@
     	"anchor_from": "bottom_middle",
     	"offset" : ["-25%x","0"],
     	"controls" :[
-   			{"answer_panel_image1@hud.answer_panel_image" : {
+   			{"answer_panel_1@hud.answer_panel_1" : {
     			"grid_position" : [0,0]
     		} },
-    		{"answer_panel_image2@hud.answer_panel_image" : {
-    			"grid_position" : [0,1]
-    		} },
-    		{"answer_panel_image3@hud.answer_panel_image" : {
+    		{"answer_panel2@hud.answer_panel_2" : {
     			"grid_position" : [1,0]
     		} },
-    		{"answer_panel_image4@hud.answer_panel_image" : {
+    		{"answer_panel3@hud.answer_panel_3" : {
+    			"grid_position" : [0,1]
+    		} },
+    		{"answer_panel4@hud.answer_panel_4" : {
     			"grid_position" : [1,1]
     		} }
-    	]
+    	],
+		"bindings": [
+			// element becomes visible then immediately turns invisible when a title containing the update string is passed
+			{
+				"binding_name": "#hud_title_text_string"      // reads in the current title string
+			},
+			{	
+				//view visible or invisible based on wether the word update appeared
+				"binding_type": "view",  
+				"source_property_name": "(not (#hud_title_text_string = 'hide'))",//show grid unless title is hide
+				"target_property_name": "#visible"
+			}
+		]
 	},
 
 
 	"exp_progress_bar_and_hotbar": {"ignored" : true},
 	"heart_renderer": { "ignored": true },
 	"hunger_renderer": { "ignored": true },
+	"hud_title_text": { "visible": false },
 
 
 
@@ -134,7 +390,10 @@
 				"operation": "insert_front",
 				"value": [
 						{"answer_grid_images@hud.answer_grid_images": {}	},
+						//title must contain the word update in order to display.
 						{"preserved_title_display@hud.preserved_title_display" : {}}
+						
+
 				]
 			}
 		]
