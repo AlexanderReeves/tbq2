@@ -23,6 +23,11 @@ execute as @s[scores={seconds=48}] run title @a actionbar §aCorrect answers thi
 execute as @s[scores={seconds=52}] run title @a actionbar §aScore 1500 points and you'll win this game's prize! It's...
 execute as @s[scores={seconds=55}] run title @a actionbar §aA brand new washing machine!
 
+execute as @s[scores={seconds=58}] run title @a actionbar §aA Lets Begin!
+
+
+execute as @s[scores={seconds=59}] run function intro/end
+
 
 
 

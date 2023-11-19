@@ -1,3 +1,4 @@
+#*UPDATED TO NEW FORMAT*
 #this code runs when the wheel result is the question mark
 #one of 5 super random events should occur.
 #Here are the ideas

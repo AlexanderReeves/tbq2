@@ -4,7 +4,7 @@ say §bSetting up all entities excluding bob...
 #Question board
 kill @e[type=tbq:board]
 summon tbq:board 157 28 -165
-execute @e[type=tbq:board] ~ ~ ~ tp @s ~ ~ ~ 145
+execute as @e[type=tbq:board] at @s run tp @s ~ ~ ~ 145
 
 #Audience
 kill @e[type=tbq:audience]

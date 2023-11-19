@@ -44,7 +44,7 @@ execute as @s[scores={seconds=30}] run scoreboard players add @s question 1
 #Stop the next question running
 tag @s[scores={seconds=30,question=6}] remove runquestion
 #the runevent tag will trigger other code to run from the main tick code in root directory
-tag @s[scores={seconds=30,question=6}] add runevent
+#tag @s[scores={seconds=30,question=6}] add runevent
 tag @s[scores={seconds=30,question=6}] add eventintro
 
 #After 10 questions, set up outro

@@ -17,7 +17,7 @@ execute as @s[scores={seconds=0..10}] run effect @a invisibility 1 1 true
 #tp players to camera, then make them face bill
 execute as @s[scores={seconds=11..18}] run tp @a @e[type=tbq:drone,c=1,tag=viewbill]
 #Make players face correct direction
-execute as @s[scores={seconds=11..18}] run execute as @a at @s run tp @s ~ ~ ~ 0 1
+execute as @s[scores={seconds=11..18}] run execute as @e[type=tbq:drone] at @s run tp @a  ~ ~ ~0.5
 execute as @s[scores={seconds=11..18}] run effect @a invisibility 1 1 true
 
 #move drone cam backwards
@@ -53,16 +53,16 @@ execute as @s[scores={seconds=37..42}] run effect @a[tag=!red] invisibility 1 1 
 execute as @s[scores={seconds=10}] run tag @a remove moved
 
 execute as @s[scores={seconds=19..24}] run tp @a[tag=blue,tag=!moved] 127 28 -188 180 0
-execute as @s[scores={seconds=19..24}] run execute as @a[tag=blue,tag=!moved] run title @a actionbar §bThe blue team!
+execute as @s[scores={seconds=19..24}] run title @a actionbar §bThe blue team!
 execute as @s[scores={seconds=19..24}] run tag @a[tag=blue,tag=!moved] add moved
 execute as @s[scores={seconds=25..30}] run tp @a[tag=yellow,tag=!moved] 127 28 -188 180 0
-execute as @s[scores={seconds=25..30}] run execute as @a[tag=yellow,tag=!moved] run title @a actionbar §gThe yellow team!
+execute as @s[scores={seconds=25..30}] run title @a actionbar §gThe yellow team!
 execute as @s[scores={seconds=25..30}] run tag @a[tag=yellow,tag=!moved] add moved
 execute as @s[scores={seconds=31..36}] run execute as @a[tag=green] run tp @s[tag=!moved] 127 28 -188 180 0
-execute as @s[scores={seconds=31..36}] run execute as @a[tag=green] run execute as @s[tag=moved] run title @a actionbar §aThe green team!
+execute as @s[scores={seconds=31..36}] run title @a actionbar §aThe green team!
 execute as @s[scores={seconds=31..36}] run tag @a[tag=green] add moved
 execute as @s[scores={seconds=37..42}] run tp @a[tag=red,tag=!moved] 127 28 -188 180 0
-execute as @s[scores={seconds=37..42}] run execute as @a[tag=red,tag=!moved] run title @a actionbar §cThe red team!
+execute as @s[scores={seconds=37..42}] run title @a actionbar §cThe red team!
 execute as @s[scores={seconds=37..42}] run tag @a[tag=red,tag=!moved] add moved
 
 execute as @s[scores={seconds=25}] run tag @a remove moved
@@ -73,8 +73,8 @@ execute as @s[scores={seconds=43..60}] run execute as @a at @s run tp @s ~ ~ ~ 0
 execute as @s[scores={seconds=43..60}] run effect @a invisibility 1 1 true
 
 
-#Set game to intro mode
-function intro/end
+#Skip intro if needed....
+#function intro/end
 
 
 

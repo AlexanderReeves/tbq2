@@ -1,7 +1,7 @@
 #tell players if they were correct via actionbar, increase score
 #*UPDATED TO NEW FORMAT*
 #assume all players are incorrect
-say checking answers
+#say checking answers
 tag @a remove correct
 
 #replace incorrect message instantly for players with correct answer
