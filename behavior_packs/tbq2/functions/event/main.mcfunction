@@ -13,11 +13,9 @@ execute as @s[tag=eventintro] run function event/introtick
 execute as @s[scores={tick=0},tag=eventwheel] run function event/wheelsecond
 execute as @s[tag=eventwheel] run function event/wheeltick
 
-
-
 #outro runs once
-#execute as @s[scores={tick=0},tag=eventoutro] run function event/outrosecond
-#execute as @s[tag=eventoutro] run function event/outrotick
+execute as @s[scores={tick=0},tag=eventoutro] run function event/outrosecond
+execute as @s[tag=eventoutro] run function event/outrotick
 
 
 

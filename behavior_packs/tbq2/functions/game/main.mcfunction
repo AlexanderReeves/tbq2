@@ -8,6 +8,9 @@ execute as @e[scores={question=1..10},tag=runquestion,tag=bob] run function ques
 execute as @e[tag=eventintro,tag=bob] run function event/main
 execute as @e[tag=eventoutro,tag=bob] run function event/main
 execute as @e[tag=eventwheel,tag=bob] run function event/main
+
+#The good and bad prizewheels should also run at the end of the game
+execute as @e[tag=prizewheels,tag=bob] run function prize/main
 #After the game ends, we should switch to gamestate 4, or runoutro tag, yet to be decided.
 execute as @e[tag=runoutro,tag=bob] run function outro/main
 

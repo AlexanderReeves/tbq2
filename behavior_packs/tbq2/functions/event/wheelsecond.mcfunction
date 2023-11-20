@@ -92,6 +92,9 @@ execute as @s[scores={seconds=50}] run function event/updatescores
 execute as @s[scores={seconds=50..52,wheelresult=6..7}] run function event/wheeljackpot
 execute as @s[scores={seconds=50,wheelresult=11..12}] run function event/wheelchaos
 
+#After the event has run, we skip ahead to end the current teams turn
+execute as @s[scores={seconds=55}] run function event/wheelnext
+
 
 
 
