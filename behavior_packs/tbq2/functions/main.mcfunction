@@ -29,6 +29,7 @@ execute as @s[scores={gamestate=0}] run function lobby/main
 execute as @s[scores={gamestate=1}] run function pregame/main
 execute as @s[scores={gamestate=2}] run function intro/main
 execute as @s[scores={gamestate=3}] run function game/main
+execute as @s[scores={gamestate=4}] run function prize/main
 
 
 #heal players

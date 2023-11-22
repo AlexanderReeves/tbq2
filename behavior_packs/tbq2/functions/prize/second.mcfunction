@@ -6,5 +6,9 @@ execute as @s[scores={seconds=7}] run title @a actionbar §aThe lowest scoring t
 
 execute as @s[scores={seconds=9}] run function prize/taglosers
 
+#For
+
+execute as @s[scores={seconds=9}] run title @a actionbar §For being the lowest scoring team, these players will face...
+execute as @s[scores={seconds=9}] run function prize/startbadwheel
 
 

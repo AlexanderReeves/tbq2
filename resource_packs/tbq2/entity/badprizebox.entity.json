@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tbq:badprizebox",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/badprizebox"
+			},
+			"geometry": {
+				"default": "geometry.badprizebox"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

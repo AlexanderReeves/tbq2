@@ -48,8 +48,8 @@ tag @s[scores={seconds=30,question=6}] remove runquestion
 tag @s[scores={seconds=30,question=6}] add eventintro
 
 #After 10 questions, set up outro
+execute as @s[scores={seconds=30,question=11}] run function question/finished
 tag @s[scores={seconds=30,question=11}] remove runquestion
-tag @s[scores={seconds=30,question=6}] add prizewheels
 
 #After our 30 second question loop, the next segment should auto start and we should have our timers and tick back to 0
 execute as @s[scores={seconds=30}] run scoreboard players set @s seconds 0

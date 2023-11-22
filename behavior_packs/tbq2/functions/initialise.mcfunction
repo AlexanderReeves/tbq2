@@ -91,6 +91,21 @@ scoreboard players set @e[tag=bob] activechaosid 0
 #scoreboard objectives add istesting dummy istesting
 #scoreboard players set @e[tag=bob] istesting 0
 
+#Scoreboard to compare scores and find the lowest score
+scoreboard objectives remove lowestscore
+scoreboard objectives add lowestscore dummy lowestscore
+scoreboard players set @e[tag=bob] lowestscore 0
+
+#scoreboard to pick a random punishment
+scoreboard objectives remove randompunish
+scoreboard objectives add randompunish dummy randompunish
+scoreboard players set @e[tag=bob] randompunish 0
+
+#also a scoreboard to countdown through punishments
+scoreboard objectives remove punishcount
+scoreboard objectives add punishcount dummy punishcount
+scoreboard players set @s punishcount 0
+
 
 
 #gamestate
