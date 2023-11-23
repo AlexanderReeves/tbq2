@@ -1,0 +1,16 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.creeper": {
+      "geometry": "Geometry.default",
+      "materials": [ { "*": "Material.default" } ],
+      "textures": [ "Texture.default" ],
+      "overlay_color": {
+          "r": "query.get_equipped_item_name == 'diamond_sword' ? 0 : 1.0",
+          "g": "query.get_equipped_item_name == 'diamond_sword' ? 0 : 1.0",
+          "b": "query.get_equipped_item_name == 'diamond_sword' ? 0 : 1.0",
+          "a": "query.get_equipped_item_name == 'diamond_sword' ? 0 : 1.0"
+      }
+    }
+  }
+}

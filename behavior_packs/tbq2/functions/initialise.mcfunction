@@ -104,7 +104,12 @@ scoreboard players set @e[tag=bob] randompunish 0
 #also a scoreboard to countdown through punishments
 scoreboard objectives remove punishcount
 scoreboard objectives add punishcount dummy punishcount
-scoreboard players set @s punishcount 0
+scoreboard players set @e[tag=bob] punishcount 0
+
+#Scoreboard to make the creepers flash before exploding
+scoreboard objectives remove creeperflash
+scoreboard objectives add creeperflash dummy creeperflash
+scoreboard players set @e[tag=bob] creeperflash 0
 
 
 

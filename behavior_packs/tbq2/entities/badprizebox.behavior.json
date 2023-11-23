@@ -9,9 +9,12 @@
 		},
 		"components": {
 			"minecraft:physics": {
-				"has_gravity": true,
+				"has_gravity": false,
 				"has_collision": true
 			},
+			    "minecraft:scale": {
+		        "value": 4
+		    },
 			"minecraft:pushable": {
 				"is_pushable": false
 			},

@@ -6,17 +6,24 @@
 #Both will be some version of a prize wheel
 execute as @s[scores={tick=0}] run function prize/second
 
-execute as @s[scores={seconds=0..10}] run tp @a @e[tag=viewstage]
 
-#Let's punish the losing team first
-#countdown the punishment if seconds = 9 or more, and punishcount >0
-execute as @s[scores={tick=0,punishcount=1..}] run scoreboard players add @s punishcount -1
-execute as @s[scores={tick=10,punishcount=5..}] run scoreboard players add @s punishcount -1
+#All players to view area....
+execute as @s[scores={seconds=0..9}] run tp @a @e[tag=viewstage]
+#Non losers stay at view area, losers are TP'd back to stage to open the badprizebox
+execute as @s[scores={seconds=10..30}] run tp @a[tag=!loser] @e[tag=viewstage]
 
-execute as @s[scores={tick=5,punishcount=10..}] run scoreboard players add @s punishcount -1
-execute as @s[scores={tick=15,punishcount=10..}] run scoreboard players add @s punishcount -1
 
-execute as @s[scores={tick=2,punishcount=20..}] run scoreboard players add @s punishcount -1
-execute as @s[scores={tick=7,punishcount=20..}] run scoreboard players add @s punishcount -1
-execute as @s[scores={tick=12,punishcount=20..}] run scoreboard players add @s punishcount -1
-execute as @s[scores={tick=17,punishcount=20..}] run scoreboard players add @s punishcount -1
+#Players have 10 seconds to press the lever
+execute as @s[scores={tick=9}] run tag @s remove punishtrigger
+execute as @s[scores={seconds=10..20},tag=!punishtrigger] run execute as @e[type=minecraft:item,name=torch] run function prize/badprizetrigger
+#Remove torch level trigger
+kill @e[type=minecraft:item,name=torch]
+
+#When a creeper gets near a player, it starts flashing, and it plays it's grow animation
+scoreboard players add @s creeperflash 1
+execute as @s[scores={creeperflash=0..4}] run replaceitem entity @e[type=tbq:fcreeper] slot.weapon.mainhand 1 diamond_sword
+execute as @s[scores={creeperflash=5..8}] run replaceitem entity @e[type=tbq:fcreeper] slot.weapon.mainhand 1 diamond_shovel
+execute as @s[scores={creeperflash=9..13}] run replaceitem entity @e[type=tbq:fcreeper] slot.weapon.mainhand 1 diamond_sword
+execute as @s[scores={creeperflash=14..18}] run replaceitem entity @e[type=tbq:fcreeper] slot.weapon.mainhand 1 diamond_shovel
+scoreboard players set @s[scores={creeperflash=20..}] creeperflash 0
+
