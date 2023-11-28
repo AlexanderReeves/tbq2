@@ -14,7 +14,10 @@ function misc/checktotalplayers
 #Check which teams are active!
 #function misc/checkactiveteams
 #Make sure that all players are legal
+execute as @a[tag=!joined] run function misc/newplayer
 #function misc/validateplayers
+#random other things to run
+function misc/misc
 #======================================
 
 
@@ -30,6 +33,7 @@ execute as @s[scores={gamestate=1}] run function pregame/main
 execute as @s[scores={gamestate=2}] run function intro/main
 execute as @s[scores={gamestate=3}] run function game/main
 execute as @s[scores={gamestate=4}] run function prize/main
+
 
 
 #heal players

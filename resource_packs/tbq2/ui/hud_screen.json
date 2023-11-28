@@ -2,6 +2,29 @@
 	"namespace": "hud",
 	//WORKING COPY, NO AUTOMATIONS
 
+//=============web fake ui thing========
+	"web_ui": {
+		"$update_string_w": "webui",   // title must include this string to update the element
+
+		"type": "image",
+		"texture": "textures/ui/webui",
+		"size": ["1000px", "500px"],
+		"anchor_to": "center",
+		"bindings": [
+			// element becomes visible then immediately turns invisible when a title containing the update string is passed
+			{
+				"binding_name": "#hud_subtitle_text_string"      // reads in the current title string
+			},
+			{	
+				//view visible or invisible based on wether the word update appeared
+				"binding_type": "view",  
+				"source_property_name": "(#hud_subtitle_text_string = 'live')",//show grid unless title is hide
+				"target_property_name": "#visible"
+			}
+		]
+	},
+
+
 
 		//==============================TITLE TO SCREEN TEXT=====================
 	"preserved_title_display": {
@@ -344,7 +367,7 @@
 		"size": [ "50%", "20%" ],
 		"anchor_to": "bottom_middle",
     	"anchor_from": "bottom_middle",
-    	"offset" : ["-25%x","0"],
+    	"offset" : ["-25%x","-10px"],
     	"controls" :[
    			{"answer_panel_1@hud.answer_panel_1" : {
     			"grid_position" : [0,0]
@@ -390,6 +413,7 @@
 				"operation": "insert_front",
 				"value": [
 						{"answer_grid_images@hud.answer_grid_images": {}	},
+						{"web_ui@hud.web_ui" : {}},
 						//title must contain the word update in order to display.
 						{"preserved_title_display@hud.preserved_title_display" : {}}
 						

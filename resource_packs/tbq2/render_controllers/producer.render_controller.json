@@ -1,0 +1,18 @@
+{
+    "format_version": "1.10.0",
+    "render_controllers": {
+      "controller.render.producer": {
+        "geometry": "Geometry.default",
+        "materials": [  {  "*": "Material.default"   } ],
+        "arrays": {
+          "textures": {
+            "Array.skins": [
+              "Texture.suit"
+            ]
+          }
+        },
+        "textures": [ "Array.skins[0]" ],
+        "part_visibility" : [{ "*": true } ]
+      }
+    }
+  }

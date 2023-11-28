@@ -24,8 +24,23 @@ execute as @s[scores={seconds=10}] run tp @a[tag=loser] 125.60 28.00 -187.56 270
 
 #IF no bad prize trigger in 20 seconds, just trigger it anyway
 execute as @s[scores={seconds=21},tag=!punishtrigger] run function prize/badprizetrigger
+#Badprize trigger sets seconds to 22
 
+#At the 25 second mark, any creepers will explode
+execute as @s[scores={seconds=25}] run playanimation @e[type=tbq:fcreeper] animation.creeper.swelling
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ ~ ~
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ ~2 ~
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~2 ~1 ~
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ ~0.2 ~0.5
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~-0.8 ~ ~-1
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ 1.2 ~1.1
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~1 ~ ~
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ ~ ~1
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~-1 ~ ~
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run particle minecraft:large_explosion ~ ~ ~-1
 
+execute as @s[scores={seconds=27}] run execute as @e[type=tbq:fcreeper] at @s run tp @s ~ ~-10 ~
+execute as @s[scores={seconds=27}] run kill @e[type=tbq:fcreeper]
 
 
 

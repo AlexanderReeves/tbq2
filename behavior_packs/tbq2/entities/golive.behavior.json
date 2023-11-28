@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "tbq:badprizebox",
+			"identifier": "tbq:golive",
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false
@@ -10,11 +10,8 @@
 		"components": {
 			"minecraft:physics": {
 				"has_gravity": true,
-				"has_collision": true
+				"has_collision": false
 			},
-			    "minecraft:scale": {
-		        "value": 4
-		    },
 			"minecraft:pushable": {
 				"is_pushable": false
 			},

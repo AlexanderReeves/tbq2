@@ -1,5 +1,5 @@
 #Check the code is loading
-tellraw @a {"rawtext":[{"text":"§a~~~§bThe Big Quiz 2 is initalising!§a~~~"}]}
+tellraw @a {"rawtext":[{"text":"§bThe Big Quiz 2 is initalising!"}]}
 tickingarea add circle 127 29 -254 4 lobby true
 tickingarea add circle 127 34 -154 4 stage true
 #Summon BOB, the squid who will run our game engine, also make a command block so bob runs.
@@ -8,6 +8,8 @@ summon minecraft:squid 127 26 -229
 tag @e[type=minecraft:squid] add bob
 #Bob needs the hidebar tag, which prevents players seeing their timerbars at this time
 tag @e[type=minecraft:squid] add hidebar
+
+
 
 #--------------SET UP SCOREBOARDS-------
 #Rest scores to defaults where neccessary from previous loads of the game
@@ -111,7 +113,9 @@ scoreboard objectives remove creeperflash
 scoreboard objectives add creeperflash dummy creeperflash
 scoreboard players set @e[tag=bob] creeperflash 0
 
-
+#Reset all players
+tag @a remove joined
+scoreboard objectives setdisplay sidebar
 
 #gamestate
 scoreboard objectives add gamestate dummy gamestate

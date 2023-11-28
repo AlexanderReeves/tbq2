@@ -1,5 +1,5 @@
 #This page summons all entities except for bob!
-say §bSetting up all entities excluding bob...
+#say §bSetting up all entities excluding bob...
 
 #Question board
 kill @e[type=tbq:board]
@@ -93,4 +93,32 @@ replaceitem entity @e[type=tbq:buzzer,tag=r3] slot.armor.head 0 chainmail_helmet
 #wheel lever
 kill @e[type=tbq:wheellever]
 summon tbq:wheellever 141 28 -151
+
+#prize boxes
+kill @e[type=tbq:badprizebox]
+
+#Producer NPC
+#LETS NOT KILL JILL AS IT WILL DELETE HER COMMANDS I THINK!
+#kill @e[type=tbq:producer]
+#summon tbq:producer "§dJill Agers" 127.54 29.00 -254.53
+
+#Armour stand signs
+kill @e[type=armor_stand]
+summon armor_stand 127.59 32.00 -266.18 0 0 sas:nametag_show_t "1. Select a team."
+summon armor_stand 130.97 32.00 -264.03 0 0 sas:nametag_show_t "§a The Green team."
+summon armor_stand 137.95 32.00 -261.96 0 0 sas:nametag_show_t "§4 The Red team."
+summon armor_stand 124.01 32.00 -263.96 0 0 sas:nametag_show_t "§6 The Yellow team."
+summon armor_stand 117.06 32.00 -262.02 0 0 sas:nametag_show_t "§b The Blue team."
+summon armor_stand 127.63 31.00 -256.56 0 0 sas:nametag_show_t "2. Speak to Jill."
+summon armor_stand 127.55 31.00 -244.26 0 0 sas:nametag_show_t "3. Start the game!"
+summon armor_stand 127.62 31.00 -236.43 0 0 sas:nametag_show_t "Start."
+
+#go live logo
+kill @e[type=tbq:golive]
+summon tbq:golive 127.48 34.00 -236.44
+
+
+
+
+
 

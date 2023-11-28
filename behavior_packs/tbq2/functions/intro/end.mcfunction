@@ -10,3 +10,6 @@ scoreboard players set @s tick 0
 tag @s add runquestion
 #Reset the clock
 scoreboard players set @s seconds 0
+
+#hide webui title
+execute as @a run function misc/shownothing

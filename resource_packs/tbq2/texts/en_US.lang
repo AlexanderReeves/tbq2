@@ -3,3 +3,7 @@ pack.description=The Big Quiz 2 Behaviour Pack
 
 entity.tbq:badprizebox.name=badprizebox
 entity.tbq:fcreeper.name=fcreeper
+entity.tbq:golive.name=golive
+entity.tbq:producer.name=Producer
+entity.tbq:redplayer.name=Red Player
+entity.tbq:blue_player.name=Blue Player

@@ -1,0 +1,1 @@
+execute as @e[type=tbq:golive] at @s run tp @s ~ ~ ~ ~2 ~
