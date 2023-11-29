@@ -7,3 +7,5 @@ entity.tbq:golive.name=golive
 entity.tbq:producer.name=Producer
 entity.tbq:redplayer.name=Red Player
 entity.tbq:blue_player.name=Blue Player
+entity.tbq:green_player.name=green_player
+entity.tbq:yellow_player.name=Yellow Player
