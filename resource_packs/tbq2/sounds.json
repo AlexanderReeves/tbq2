@@ -46,7 +46,7 @@
 				"pitch": [0.8, 1.2],
 				"volume": 1
 			},
-			"tbq:redplayer": {
+			"tbq:red_player": {
 				"events": {
 					"ambient": "mob.husk.ambient",
 					"death": "mob.husk.death",

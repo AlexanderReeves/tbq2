@@ -2,7 +2,7 @@
 	"format_version": "1.16.100",
 	"minecraft:entity": {
 		"description": {
-			"identifier": "tbq:redplayer",
+			"identifier": "tbq:red_player",
 			"is_spawnable": false,
 			"is_summonable": true,
 			"is_experimental": false

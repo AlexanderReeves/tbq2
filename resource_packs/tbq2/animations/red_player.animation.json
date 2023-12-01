@@ -1,7 +1,7 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
-		"animation.redplayer.attack_bare_hand": {
+		"animation.red_player.attack_bare_hand": {
 			"loop": true,
 			"bones": {
 				"leftarm": {
@@ -20,7 +20,7 @@
 				}
 			}
 		},
-		"animation.redplayer.swimming": {
+		"animation.red_player.swimming": {
 			"loop": true,
 			"bones": {
 				"body": {

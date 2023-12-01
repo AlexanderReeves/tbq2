@@ -2,16 +2,16 @@
 	"format_version": "1.8.0",
 	"minecraft:client_entity": {
 		"description": {
-			"identifier": "tbq:redplayer",
+			"identifier": "tbq:red_player",
 			"min_engine_version": "1.8.0",
 			"materials": {
 				"default": "husk"
 			},
 			"textures": {
-				"default": "textures/entity/redplayer"
+				"default": "textures/entity/red_player"
 			},
 			"geometry": {
-				"default": "geometry.redplayer"
+				"default": "geometry.red_player"
 			},
 			"scripts": {
 				"pre_animation": ["variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;"]
