@@ -2,6 +2,7 @@
 	"format_version": "1.8.0",
 	"animations": {
 		"animation.contenstant.jump": {
+			"loop": true,
 			"animation_length": 1.6,
 			"override_previous_animation": true,
 			"bones": {
@@ -56,6 +57,7 @@
 			}
 		},
 		"animation.contenstant.think": {
+			"loop": true,
 			"animation_length": 2.72,
 			"bones": {
 				"body": {

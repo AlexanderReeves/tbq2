@@ -20,6 +20,23 @@ kill @e[type=tbq:billagers]
 #Kill any logo
 kill @e[type=tbq:logo]
 
+#Lobby mirrors
+kill @e[type=tbq:mirror]
+summon tbq:mirror 140.84 33.00 -237.01 150 0
+
+#players
+kill @e[tag=contestant]
+summon tbq:red_player 141.07 33.00 -243.17 150 0
+tag @e[type=tbq:red_player] add contestant
+kill @e[type=tbq:green_player]
+summon tbq:green_player 139.54 33.00 -238.70
+tag @e[type=tbq:green_player] add contestant
+kill @e[type=tbq:blue_player]
+summon tbq:blue_player 135.56 33.00 -238.45
+tag @e[type=tbq:blue_player] add contestant
+kill @e[type=tbq:yellow_player]
+summon tbq:yellow_player 134.83 33.00 -240.97 200 0
+tag @e[type=tbq:yellow_player] add contestant
 #Cameras
 kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193

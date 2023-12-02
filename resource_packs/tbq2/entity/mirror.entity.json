@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "tbq:mirror",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/mirror"
+			},
+			"geometry": {
+				"default": "geometry.mirror"
+			},
+			"render_controllers": ["controller.render.default"]
+		}
+	}
+}

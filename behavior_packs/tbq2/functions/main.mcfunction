@@ -3,7 +3,7 @@
 #*UPDATED TO NEW LANGUAGE*
 #THIS code is the MAIN function file, Most code is run from here
 #It provides a way to set the order that the other functions will be called
-
+#say running
 #This code is run by an entity(squid) called "BOB" who sits next to a repeating command block in a ticking area under the main lobby.
 #execute as @e[tag=bob] run say The server is ticking
 
