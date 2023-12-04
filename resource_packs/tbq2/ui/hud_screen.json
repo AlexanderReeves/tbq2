@@ -81,6 +81,7 @@
 		//Final product is a label, defined as #text
 		"type": "label",
 		"text": "#text1",
+		"layer":1,
 
 		"controls": [
 			{
@@ -152,6 +153,7 @@
 		//Final product is a label, defined as #text
 		"type": "label",
 		"text": "#text2",
+		"layer":1,
 
 		"controls": [
 			{
@@ -223,6 +225,7 @@
 		//Final product is a label, defined as #text
 		"type": "label",
 		"text": "#text3",
+		"layer":1,
 
 		"controls": [
 			{
@@ -294,6 +297,7 @@
 		//Final product is a label, defined as #text
 		"type": "label",
 		"text": "#text4",
+		"layer":1,
 
 		"controls": [
 			{
@@ -397,6 +401,92 @@
 	},
 
 
+	//================================Question Panel==============================
+
+		"question_text": {
+		"$update_string_q": "qwes",   // title must include this string to update the element
+
+		//Final product is a label, defined as #text
+		"type": "label",
+		"text": "#textq",
+		"layer":1,
+
+		"controls": [
+			{
+				//Weve added in  a 1 panel element here?
+				"data_control_q": {
+					"type": "panel",
+					"size": [ 0, 0 ],
+					//That reads the hud title message
+					"bindings": [
+						{
+							"binding_name": "#hud_title_text_string"      // reads in the current title string
+						},
+						{
+							//OVERWRITE OUR PRESERVED TEXT
+							//when the visibility changes, of #hud_title_text_string, overwrite #preservedtext
+							"binding_name": "#hud_title_text_string",
+							"binding_name_override": "#preserved_text_q",
+							"binding_condition": "visibility_changed" 
+						},
+						// element becomes visible then immediately turns invisible when a title containing the update string is passed
+						{	
+							//view visible or invisible based on wether the word update appeared
+							"binding_type": "view",
+							"source_property_name": "(not (#hud_title_text_string = #preserved_text_q) and not ((#hud_title_text_string - $update_string_q) = #hud_title_text_string))",
+							"target_property_name": "#visible"
+						}
+					]
+				}
+			}
+		],
+		"bindings": [
+			{
+				//Updates the text message to remove the word "update"
+				"binding_type": "view",
+				"source_control_name": "data_control_q",   						// reads bindings from the "data_control" child element
+				//"resolve_sibling_scope": true,		 						// required if "data_control" is a sibling of the element that pulls the binding
+				"source_property_name": "(#preserved_text_q - $update_string_q)",   // remove string update text from the text to be displayed
+				"target_property_name": "#textq"
+			}
+		]
+	},
+
+	//A Panel that contans an image, with a layer of text over the top.
+	"question_image": {
+		"type": "image",
+		"texture": "textures/ui/questionpanel",
+		"size": ["50%", "50%"],
+		"anchor_to": "bottom_middle",
+    	//"visible" : false,
+		"controls" : [
+			{"question_text@hud.question_text" : {"layer":1} }
+		]
+		
+	},
+
+	"question_panel" : {
+		"type" : "panel",
+		//"size" :["200%","100%"],
+		"controls" : [
+			{"question_image@hud.question_image" : {} }
+		],
+		//Same bindings as the answer grid
+		"bindings": [
+			// element becomes visible then immediately turns invisible when a title containing the update string is passed
+			{
+				"binding_name": "#hud_title_text_string"      // reads in the current title string
+			},
+			{	
+				//view visible or invisible based on wether the word update appeared
+				"binding_type": "view",  
+				"source_property_name": "(not (#hud_title_text_string = 'hide'))",//show grid unless title is hide
+				"target_property_name": "#visible"
+			}
+		]
+	},
+	//================================END QUESTION PANEL===========================
+
 	"exp_progress_bar_and_hotbar": {"ignored" : true},
 	"heart_renderer": { "ignored": true },
 	"hunger_renderer": { "ignored": true },
@@ -412,6 +502,7 @@
 				"array_name": "controls",
 				"operation": "insert_front",
 				"value": [
+						{"question_panel@hud.question_panel":{} },
 						{"answer_grid_images@hud.answer_grid_images": {}	},
 						{"web_ui@hud.web_ui" : {}},
 						//title must contain the word update in order to display.
