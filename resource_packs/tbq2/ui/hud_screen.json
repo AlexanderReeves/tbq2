@@ -18,7 +18,7 @@
 			{	
 				//view visible or invisible based on wether the word update appeared
 				"binding_type": "view",  
-				"source_property_name": "(#hud_subtitle_text_string = 'live')",//show grid unless title is hide
+				"source_property_name": "(#hud_title_text_string = 'shwl')",//show grid unless title is hide
 				"target_property_name": "#visible"
 			}
 		]
@@ -362,7 +362,7 @@
 		]
 	},
 //==============================================END OPTION 4 PANEL==========
-
+//==================================ANSWER PANELS================
 	//Answer grid containing images
 	"answer_grid_images" : {
 		"$update_string": "showgrid",   // title must include this string to update the element
@@ -394,12 +394,12 @@
 			{	
 				//view visible or invisible based on wether the word update appeared
 				"binding_type": "view",  
-				"source_property_name": "(not (#hud_title_text_string = 'hide'))",//show grid unless title is hide
+				"source_property_name": "(#hud_title_text_string = 'shwa') or (#hud_title_text_string = 'shwb')",//show grid unless title is hide
 				"target_property_name": "#visible"
 			}
 		]
 	},
-
+//===================END ANSWER PANELS
 
 	//================================Question Panel==============================
 
@@ -480,7 +480,7 @@
 			{	
 				//view visible or invisible based on wether the word update appeared
 				"binding_type": "view",  
-				"source_property_name": "(not (#hud_title_text_string = 'hide'))",//show grid unless title is hide
+				"source_property_name": "(#hud_title_text_string = 'shwq') or (#hud_title_text_string = 'shwb')",//show grid specifically, or show grid and panels
 				"target_property_name": "#visible"
 			}
 		]
