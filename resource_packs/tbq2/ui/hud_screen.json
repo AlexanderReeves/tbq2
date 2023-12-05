@@ -13,7 +13,7 @@
 		"bindings": [
 			// element becomes visible then immediately turns invisible when a title containing the update string is passed
 			{
-				"binding_name": "#hud_subtitle_text_string"      // reads in the current title string
+				"binding_name": "#hud_title_text_string"      // reads in the current title string
 			},
 			{	
 				//view visible or invisible based on wether the word update appeared
