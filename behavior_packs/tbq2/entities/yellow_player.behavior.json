@@ -17,7 +17,12 @@
 			},
 			"minecraft:push_through": {
 				"value": 1
-			}
+			},
+			"minecraft:behavior.look_at_player": {
+		        "priority": 0,
+		        "look_distance": 5.0,
+		        "probability": 0.02
+	      }
 		}
 	}
 }

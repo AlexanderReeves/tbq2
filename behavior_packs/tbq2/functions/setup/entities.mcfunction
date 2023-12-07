@@ -32,11 +32,26 @@ kill @e[type=tbq:green_player]
 summon tbq:green_player 139.54 33.00 -238.70
 tag @e[type=tbq:green_player] add contestant
 kill @e[type=tbq:blue_player]
-summon tbq:blue_player 135.56 33.00 -238.45
+summon tbq:blue_player 135.49 33.00 -237.52
 tag @e[type=tbq:blue_player] add contestant
 kill @e[type=tbq:yellow_player]
 summon tbq:yellow_player 134.83 33.00 -240.97 200 0
 tag @e[type=tbq:yellow_player] add contestant
+
+scoreboard players set @e[tag=contestant] animcountd -1
+
+#chairs for players
+kill @e[type=tbq:chair]
+
+summon tbq:chair 139.97 33.00 -237.91 335 0
+tag @e[type=tbq:chair] add tositon
+summon tbq:chair 141.66 33.00 -239.74 320 0
+summon tbq:chair 137.69 33.00 -237.26 350 0
+summon tbq:chair 133.67 33.00 -237.59 80 0
+
+#have the girl sit in the chair
+ride @e[type=tbq:green_player,c=1] start_riding @e[tag=tositon]
+
 #Cameras
 kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193
@@ -116,8 +131,8 @@ kill @e[type=tbq:badprizebox]
 
 #Producer NPC
 #LETS NOT KILL JILL AS IT WILL DELETE HER COMMANDS I THINK!
-#kill @e[type=tbq:producer]
-#summon tbq:producer "§dJill Agers" 127.54 29.00 -254.53
+kill @e[type=tbq:producer]
+summon tbq:producer "§dJill Agers" 127.54 29.00 -254.53
 
 #Armour stand signs
 kill @e[type=armor_stand]

@@ -113,6 +113,13 @@ scoreboard objectives remove creeperflash
 scoreboard objectives add creeperflash dummy creeperflash
 scoreboard players set @e[tag=bob] creeperflash 0
 
+#scoreboard for contestant lobby animations
+scoreboard objectives remove animcountd
+scoreboard objectives add animcountd dummy animcountd
+#plus the scoreboard for their random lobby chattinf
+scoreboard objectives remove chatcountd
+scoreboard objectives add chatcountd dummy chatcountd
+
 #Reset all players
 tag @a remove joined
 scoreboard objectives setdisplay sidebar

@@ -1,5 +1,6 @@
 #*CODEUPDATED TO NEW EXECUTE COMMAND FORMAT*#
 #this main lobby function controls the game while in lobby state
+execute as @s[scores={tick=0}] run function lobby/second
 
 #while in the lobby allow players to select a team
 function lobby/teamselection
