@@ -1,3 +1,5 @@
+
+#=============================Contestant Animations
 #- anim counts down for the contestants in the lobby
 scoreboard players add @e[tag=contestant,type=!tbq:yellow_player] animcountd -1
 
@@ -12,4 +14,14 @@ execute as @e[scores={animcountd=4},type=tbq:blue_player] run playanimation @s a
 
 scoreboard players set @e[scores={animcountd=..0},type=tbq:blue_player] animcountd 8
 #yellow has no animation as is has a look-at-player animation already running
+
+
+#============================Contestant Chatting
+scoreboard players add @e[tag=contestant] chatcountd -1
+
+#Say a random chat message to the player when the chat count is 0 exactly
+execute as @e[tag=contestant,scores={chatcountd=0}] run function lobby/randomcontmess
+
+#Reset chat timer to a random number when score is 0 or less
+scoreboard players random @e[tag=contestant,scores={chatcountd=..-1}] chatcountd 20 60
 

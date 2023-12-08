@@ -39,6 +39,9 @@ summon tbq:yellow_player 134.83 33.00 -240.97 200 0
 tag @e[type=tbq:yellow_player] add contestant
 
 scoreboard players set @e[tag=contestant] animcountd -1
+scoreboard players set @e[tag=contestant] chatcountd -1
+scoreboard players set @e[tag=contestant] randchatmess 0
+
 
 #chairs for players
 kill @e[type=tbq:chair]
@@ -48,6 +51,12 @@ tag @e[type=tbq:chair] add tositon
 summon tbq:chair 141.66 33.00 -239.74 320 0
 summon tbq:chair 137.69 33.00 -237.26 350 0
 summon tbq:chair 133.67 33.00 -237.59 80 0
+
+#Lights around the players getting ready
+kill @e[type=tbq:stage_light]
+summon tbq:stage_light 143.00 33.00 -246.00 30
+summon tbq:stage_light 135.50 33.00 -245.30 -30 0
+#summon tbq:stage_light 131.11 33.00 -240.45 -80 0
 
 #have the girl sit in the chair
 ride @e[type=tbq:green_player,c=1] start_riding @e[tag=tositon]

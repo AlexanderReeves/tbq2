@@ -116,9 +116,13 @@ scoreboard players set @e[tag=bob] creeperflash 0
 #scoreboard for contestant lobby animations
 scoreboard objectives remove animcountd
 scoreboard objectives add animcountd dummy animcountd
-#plus the scoreboard for their random lobby chattinf
+#plus the scoreboard for their random lobby chattint
 scoreboard objectives remove chatcountd
 scoreboard objectives add chatcountd dummy chatcountd
+#Plus a random number to determine which of the 3 messages will run
+scoreboard objectives remove randchatmess
+scoreboard objectives add randchatmess dummy randchatmess
+
 
 #Reset all players
 tag @a remove joined
