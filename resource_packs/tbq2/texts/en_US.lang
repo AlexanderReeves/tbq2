@@ -12,3 +12,4 @@ entity.tbq:yellow_player.name=Yellow Player
 entity.tbq:mirror.name=mirror
 entity.tbq:chair.name=Chair
 entity.tbq:stage_light.name=Stage Light
+entity.tbq:camera_man.name=Camera Man

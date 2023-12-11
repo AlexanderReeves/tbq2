@@ -25,3 +25,12 @@ execute as @e[tag=contestant,scores={chatcountd=0}] run function lobby/randomcon
 #Reset chat timer to a random number when score is 0 or less
 scoreboard players random @e[tag=contestant,scores={chatcountd=..-1}] chatcountd 20 60
 
+#make the lobby drone go back and forth based on seconds in this timer
+scoreboard players add @s lobbydronemv 1
+scoreboard players set @s[scores={lobbydronemv=17}] lobbydronemv 0
+
+execute as @s[scores={lobbydronemv=0}] run playanimation @e[type=tbq:camera_man] animation.camera_man.controll
+
+execute as @s[scores={lobbydronemv=9}] run execute as @e[type=tbq:camera_man] animation.camera_man.controlr
+
+

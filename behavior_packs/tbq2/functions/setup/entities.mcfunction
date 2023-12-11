@@ -60,11 +60,18 @@ summon tbq:stage_light 135.50 33.00 -245.30 -30 0
 
 #have the girl sit in the chair
 ride @e[type=tbq:green_player,c=1] start_riding @e[tag=tositon]
+#lobby camera guy, 2 cameras and a drone
+
 
 #Cameras
 kill @e[type=tbq:camera]
 summon tbq:camera 127 28 -193
 tag @e[type=tbq:camera,tag=!tagged] add viewstage
+tag @e[type=tbq:camera,tag=!tagged] add tagged
+
+summon tbq:camera 113.71 33.00 -238.36 -90 0
+summon tbq:camera 115.85 33.00 -231.98 -150 0
+tag @e[type=tbq:camera,tag=!tagged] add lobbycam
 tag @e[type=tbq:camera,tag=!tagged] add tagged
 
 #Drone camera
@@ -74,8 +81,15 @@ summon tbq:drone 127 34 -152
 tag @e[type=tbq:drone,tag=!tagged] add viewbill
 tag @e[type=tbq:drone,tag=!tagged] add tagged
 
+summon tbq:drone 120.38 33.47 -242.64 90 0
+tag @e[type=tbq:drone,tag=!tagged] add viewbill
+tag @e[type=tbq:drone,tag=!tagged] add lobbydrone
+#
+kill @e[type=tbq:camera_man]
+summon tbq:camera_man 116.57 33.00 -238.19 180 0
 
-#Buzzers
+
+#BUZZERS
 kill @e[type=tbq:buzzer]
 #BLUE TEAM
 summon tbq:buzzer 113 34 -161

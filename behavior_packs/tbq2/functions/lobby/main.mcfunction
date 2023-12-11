@@ -8,6 +8,10 @@ function lobby/teamselection
 #Make sure the scoreboard is not displaying
 execute as @e[scores={istesting=0}] run scoreboard objectives setdisplay sidebar
 
+#mKe the drone in the lobby move back and forth
+execute as @s[scores={lobbydronemv=0..8}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^0.04
+execute as @s[scores={lobbydronemv=9..16}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^-0.04
+
 
 #Start the game when the lever is pressed, causing a stick to spawn
 #Run the animation for the lever
@@ -21,3 +25,4 @@ execute as @e[type=item,name=Stick] run scoreboard players set @e[tag=bob,scores
 execute as @e[type=item,name=Stick] run execute as @e[tag=bob,scores={activeplayers=0}] run tellraw @a {"rawtext":[{"text":"§cThere are no players ready to start!"}]}
 #Remove the stick
 kill @e[type=item,name=Stick]
+

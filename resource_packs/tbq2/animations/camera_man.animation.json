@@ -1,0 +1,52 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.camera_man.casting.v1.0": {
+			"loop": true,
+			"bones": {
+				"leftarm": {
+					"position": ["5.0 - this", 0, "-this"],
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "-135.0 - this"]
+				},
+				"rightarm": {
+					"position": ["-5.0 - this", 0, "-this"],
+					"rotation": ["math.cos(query.life_time * 763.4) * 14.3239 - this", "-this", "135.0 - this"]
+				}
+			}
+		},
+		"animation.camera_man.control": {
+			"loop": true,
+			"animation_length": 16.04167,
+			"override_previous_animation": true,
+			"bones": {
+				"head": {
+					"rotation": {
+						"0.0": [-35.95831, 27.48706, -22.65186],
+						"8.0417": [-36.60701, -29.12616, 15.74307],
+						"15.9583": [-35.95831, 27.48706, -22.65186]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [-82.47168, -4.95712, -0.65426],
+						"0.9583": [-81.13, -32.19, -4.75],
+						"8.0417": [-81.13, -32.19, -4.75],
+						"9.2917": [-82.47168, -4.95712, -0.65426]
+					}
+				},
+				"leftArm": {
+					"rotation": [-34.41324, -3.55022, 17.25644]
+				},
+				"joystick": {
+					"rotation": {
+						"0.0": [0, 0, -25],
+						"0.9583": [0, 0, 42.5],
+						"8.0417": [0, 0, 42.5],
+						"9.2917": [0, 0, -25],
+						"16.0": [0, 0, -25]
+					}
+				}
+			}
+		}
+	}
+}

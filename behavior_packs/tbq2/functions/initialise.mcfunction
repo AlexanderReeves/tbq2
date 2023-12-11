@@ -123,6 +123,11 @@ scoreboard objectives add chatcountd dummy chatcountd
 scoreboard objectives remove randchatmess
 scoreboard objectives add randchatmess dummy randchatmess
 
+#scoreboard for the drone in the lobby to go back and forth
+scoreboard objectives remove lobbydronemv
+scoreboard objectives add lobbydronemv dummy lobbydronemv
+scoreboard players set @e[tag=bob] lobbydronemv 0
+
 
 #Reset all players
 tag @a remove joined

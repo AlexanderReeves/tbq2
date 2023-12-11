@@ -1,0 +1,29 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "tbq:camera_man",
+      "materials": { "default": "skeleton" },
+      "textures": {
+
+        "default": "textures/entity/camera_man"
+      },
+      "geometry": {
+        "default": "geometry.camera_man"
+      },
+      "animations": {
+	      "control": "animation.camera_man.control"
+      },
+      "scripts": {
+          "animate": [
+            "control"
+          ]
+        },
+      "render_controllers": ["controller.render.default"],
+      "spawn_egg": {
+        "base_color": "#000000",
+        "overlay_color": "#ffffff"
+      }
+    }
+  }
+}
