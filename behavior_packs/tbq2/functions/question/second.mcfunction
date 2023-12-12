@@ -36,8 +36,9 @@ scoreboard players set @s[scores={seconds=2}] loadqtick 0
 
 #Hide questionboard display via helmet slot check
 execute as @s[scores={seconds=10}] run replaceitem entity @a slot.armor.head 1 air 1
-#Display answer options in the sidebar
-execute as @s[scores={seconds=10}] run function question/anssidebar
+#Display answer options in UI panel, where title shwb = show both, question and answers
+#execute as @s[scores={seconds=10}] run title @a title shwb
+#execute as @s[scores={seconds=10}] run function question/anssidebar
 
 #Hide timerbar
 execute as @s[scores={seconds=22}] run tag @s add hidebar
