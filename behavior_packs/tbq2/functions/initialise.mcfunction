@@ -128,6 +128,11 @@ scoreboard objectives remove lobbydronemv
 scoreboard objectives add lobbydronemv dummy lobbydronemv
 scoreboard players set @e[tag=bob] lobbydronemv 0
 
+#scoreboard objectives to load questions into our ui loadquestiontick
+scoreboard objective remove loadqtick
+scoreboard objectives add loadqtick dummy loadqtick
+scoreboard objectives set @e[tag=bob] loadqtick
+
 
 #Reset all players
 tag @a remove joined
