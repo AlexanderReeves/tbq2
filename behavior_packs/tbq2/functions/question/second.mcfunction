@@ -23,8 +23,9 @@ execute as @s[scores={seconds=2}] run title @a times 20 140 20
 #Use the new UI system to load the questions onto the screen
 #You can only update one line of text per tick, we have 5+ lines to update, set variable to 0, and iterate up
 #Load a new line of text each tick, e.g question, then option 1, then option 2
+#the tick function here will increase via question/main, and iterate through the lines
 scoreboard players set @s[scores={seconds=2}] loadqtick 0
-execute as @s[scores={seconds=2}] run function pyquestions/loadquestion
+
 
 #==================OLD SYSTEM======================
 #Title question will display the question in the actionbar depending on the question qid set above
