@@ -40,6 +40,8 @@ execute as @s[scores={seconds=10}] run replaceitem entity @a slot.armor.head 1 a
 #execute as @s[scores={seconds=10}] run title @a title shwb
 #execute as @s[scores={seconds=10}] run function question/anssidebar
 
+#Hide question ui
+execute as @s[scores={seconds=22}] run title @a title hide
 #Hide timerbar
 execute as @s[scores={seconds=22}] run tag @s add hidebar
 #Check which players have the correct answers
