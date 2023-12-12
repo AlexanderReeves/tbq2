@@ -16,6 +16,9 @@ execute as @s[scores={loadqtick=3}] run pyquestions/titleopt2
 execute as @s[scores={loadqtick=4}] run pyquestions/titleopt3
 execute as @s[scores={loadqtick=5}] run pyquestions/titleopt4
 
+#load the variable for the correct answer
+execute as @s[scores={loadqtick=6}] run pyquestions/correctanswer
+
 #When we want to display the available answer options, we will load them via a title in question/seconds
 #Iterate up
 scoreboard players add @s loadqtick 1
