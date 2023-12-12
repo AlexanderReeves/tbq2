@@ -19,7 +19,11 @@ execute as @s[scores={seconds=2}] run scoreboard players random @s qid 1 3
 execute as @s[scores={seconds=2}] run scoreboard players set @a answer 0
 #time question will display for
 execute as @s[scores={seconds=2}] run title @a times 20 140 20
+
 #Use the new UI system to load the questions onto the screen
+#You can only update one line of text per tick, we have 5+ lines to update, set variable to 0, and iterate up
+#Load a new line of text each tick, e.g question, then option 1, then option 2
+scoreboard players set @s[scores={seconds=2}] loadqtick 0
 execute as @s[scores={seconds=2}] run function pyquestions/loadquestion
 
 #==================OLD SYSTEM======================
