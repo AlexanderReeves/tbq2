@@ -1,12 +1,15 @@
 #*UPDATED TO NEW FORMAT*
 #Run code that should only be running once per second, instead of every tick
 execute as @s[scores={tick=0}] run function question/second
-
 #The rest of these will run every tick.
+
 
 #Move all to view board when a question is about to load.
 execute as @s[scores={seconds=0..2}] run tp @a 147 28 -180 -35 -10
 execute as @s[scores={seconds=0..1}] run effect @a invisibility 1 1 true
+
+#load the questions, starting at the 3 second mark, via iterating up through the options
+execute as @s[scores={seconds=3..}] run function pyquestions/loadquestion
 
 #DOUBLE CHECK THESE VALUES Move players to their buzzer platforms... They won't be able to see as their screen will be covered with the question.
 execute as @s[scores={seconds=3..10}] run tp @a[tag=blue] 114 33 -159 180 0
