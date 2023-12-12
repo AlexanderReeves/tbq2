@@ -1,8 +1,10 @@
 
 #*UPDATED TO NEW FORMAT*
+#===================LOAD UI DISPLAY BOARD==============
 #Give all a leather helmet.... This will load a special display board view on for each player!
 execute as @s[scores={seconds=2}] run replaceitem entity @a slot.armor.head 1 leather_helmet 1
 
+#===================DISPLAY THE 3d UI TIMER=============
 #Allow the timerbar to be displayed via removing the tag "hidebar" from bob
 execute as @s[scores={seconds=2}] run tag @s remove hidebar
 #play the animation to have the timer count down
@@ -10,17 +12,21 @@ execute as @s[scores={seconds=2}] run playanimation @a animation.timerbar.deplet
 #remove the sidebard display
 execute as @s[scores={seconds=2}] run scoreboard objectives setdisplay sidebar
 
-#GENERATE RANDOM QUESTION!                  min and max question number depend on total number of questions(place at end of statement)
+#==================GENERATE RANDOM QUESTION=========
+#min and max question number depend on total number of questions(place at end of statement)
 execute as @s[scores={seconds=2}] run scoreboard players random @s qid 1 3
 #Reset each players current answer status to 0, aka no answer yet
 execute as @s[scores={seconds=2}] run scoreboard players set @a answer 0
-#Display the question and question number
 #time question will display for
 execute as @s[scores={seconds=2}] run title @a times 20 140 20
-#Titlquestion will display the question in the actionbar depending on the question qid set above
-execute as @s[scores={seconds=2}] run function question/titlequestion
+#Use the new UI system to load the questions onto the screen
+execute as @s[scores={seconds=2}] run function pyquestions/loadquestion
+
+#==================OLD SYSTEM======================
+#Title question will display the question in the actionbar depending on the question qid set above
+#execute as @s[scores={seconds=2}] run function question/titlequestion
 #titlenumber plays a number based on whatever count we are up to
-execute as @s[scores={seconds=2}] run function question/titlenumber
+#execute as @s[scores={seconds=2}] run function question/titlenumber
 
 
 #Hide questionboard display via helmet slot check
