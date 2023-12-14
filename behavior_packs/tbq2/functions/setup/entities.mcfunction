@@ -12,7 +12,7 @@ summon tbq:audience 120 25 -207
 
 #Game start lever
 kill @e[type=tbq:tvlever]
-summon tbq:tvlever 127 30 -237.8
+summon tbq:tvlever 127 33 -237.8
 
 #Kill bill lol
 kill @e[type=tbq:billagers]
@@ -165,12 +165,12 @@ summon armor_stand 137.95 32.00 -261.96 0 0 sas:nametag_show_t "§4 The Red team
 summon armor_stand 124.01 32.00 -263.96 0 0 sas:nametag_show_t "§6 The Yellow team."
 summon armor_stand 117.06 32.00 -262.02 0 0 sas:nametag_show_t "§b The Blue team."
 summon armor_stand 127.63 31.00 -256.56 0 0 sas:nametag_show_t "2. Speak to Jill."
-summon armor_stand 127.55 31.00 -244.26 0 0 sas:nametag_show_t "3. Start the game!"
-summon armor_stand 127.62 31.00 -236.43 0 0 sas:nametag_show_t "Start."
+summon armor_stand 127.55 35.00 -244.26 0 0 sas:nametag_show_t "3. Start the game!"
+summon armor_stand 127.62 35.00 -236.43 0 0 sas:nametag_show_t "Start."
 
 #go live logo
 kill @e[type=tbq:golive]
-summon tbq:golive 127.48 34.00 -236.44
+summon tbq:golive 127.48 37.00 -236.44
 
 
 

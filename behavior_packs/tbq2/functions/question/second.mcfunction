@@ -14,7 +14,7 @@ execute as @s[scores={seconds=2}] run scoreboard objectives setdisplay sidebar
 
 #==================GENERATE RANDOM QUESTION=========
 #min and max question number depend on total number of questions(place at end of statement)
-execute as @s[scores={seconds=2}] run scoreboard players random @s qid 1 3
+execute as @s[scores={seconds=2}] run scoreboard players random @s qid 1 5
 #Reset each players current answer status to 0, aka no answer yet
 execute as @s[scores={seconds=2}] run scoreboard players set @a answer 0
 #time question will display for
@@ -24,7 +24,7 @@ execute as @s[scores={seconds=2}] run title @a times 20 140 20
 #You can only update one line of text per tick, we have 5+ lines to update, set variable to 0, and iterate up
 #Load a new line of text each tick, e.g question, then option 1, then option 2
 #the tick function here will increase via question/main, and iterate through the lines
-scoreboard players set @s[scores={seconds=2}] loadqtick 0
+scoreboard players set @s[scores={seconds=3}] loadqtick 0
 
 
 #==================OLD SYSTEM======================
@@ -37,11 +37,11 @@ scoreboard players set @s[scores={seconds=2}] loadqtick 0
 #Hide questionboard display via helmet slot check
 execute as @s[scores={seconds=10}] run replaceitem entity @a slot.armor.head 1 air 1
 #Display answer options in UI panel, where title shwb = show both, question and answers
-#execute as @s[scores={seconds=10}] run title @a title shwb
+execute as @s[scores={seconds=10}] run title @a title shwb
 #execute as @s[scores={seconds=10}] run function question/anssidebar
 
 #Hide question ui
-execute as @s[scores={seconds=22}] run title @a title hide
+execute as @s[scores={seconds=25}] run title @a title hide
 #Hide timerbar
 execute as @s[scores={seconds=22}] run tag @s add hidebar
 #Check which players have the correct answers

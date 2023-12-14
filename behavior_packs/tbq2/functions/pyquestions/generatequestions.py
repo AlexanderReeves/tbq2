@@ -39,21 +39,21 @@ def createFunctionFiles (questionrawtext,askmcf,correctanswerfile,option1mcf,opt
 			#save the question to our mcfunction question asking file, adding in the required syntax
 			#{{ }} is the way to add braces tp the text file (When the text is opened with an f)
 			#{} is the way to add variables into the middle of a quote based string
-			askmcf.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run title @a title qwes{item}")
+			askmcf.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run title @a title qwes{item}")
 
 		#If sixcount = 2, our current line is a number corresponding with the correct answer of this prompt question
 		if sixcount == 2:
-			correctanswerfile.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run scoreboard players set @s correctanswer {item}")
+			correctanswerfile.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run scoreboard players set @s correctanswer {item}")
 
 		#IF sixcount = 3, we are reading a line in our doc that showse first option of four answers... Save that to the relevant mcfunction file to be read as a title
 		if sixcount == 3:
-			option1mcf.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run title @a title option1{item}")
+			option1mcf.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run title @a title option1{item}")
 		if sixcount == 4:
-			option2mcf.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run title @a title option2{item}")
+			option2mcf.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run title @a title option2{item}")
 		if sixcount == 5:
-			option3mcf.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run title @a title option3{item}")
+			option3mcf.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run title @a title option3{item}")
 		if sixcount == 6:
-			option4mcf.write(f"execute as @s[scores={{questionnumber={int(idx/6+1)}}}] run title @a title option4{item}")
+			option4mcf.write(f"execute as @s[scores={{qid={int(idx/6+1)}}}] run title @a title option4{item}")
 
 			
 		#reset our counter back to 0 when required

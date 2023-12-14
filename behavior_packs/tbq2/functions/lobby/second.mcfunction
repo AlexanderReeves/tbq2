@@ -27,10 +27,10 @@ scoreboard players random @e[tag=contestant,scores={chatcountd=..-1}] chatcountd
 
 #make the lobby drone go back and forth based on seconds in this timer
 scoreboard players add @s lobbydronemv 1
-scoreboard players set @s[scores={lobbydronemv=17}] lobbydronemv 0
+scoreboard players set @s[scores={lobbydronemv=16}] lobbydronemv 0
 
 execute as @s[scores={lobbydronemv=0}] run playanimation @e[type=tbq:camera_man] animation.camera_man.controll
 
-execute as @s[scores={lobbydronemv=9}] run execute as @e[type=tbq:camera_man] animation.camera_man.controlr
+execute as @s[scores={lobbydronemv=8}] run playanimation @e[type=tbq:camera_man] animation.camera_man.controlr
 
 

@@ -12,13 +12,10 @@
         "default": "geometry.camera_man"
       },
       "animations": {
-	      "control": "animation.camera_man.control"
+	      "controll": "animation.camera_man.controll",
+        "controlr": "animation.camera_man.controlr"
       },
-      "scripts": {
-          "animate": [
-            "control"
-          ]
-        },
+
       "render_controllers": ["controller.render.default"],
       "spawn_egg": {
         "base_color": "#000000",

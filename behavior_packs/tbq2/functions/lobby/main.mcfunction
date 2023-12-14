@@ -9,8 +9,8 @@ function lobby/teamselection
 execute as @e[scores={istesting=0}] run scoreboard objectives setdisplay sidebar
 
 #mKe the drone in the lobby move back and forth
-execute as @s[scores={lobbydronemv=0..8}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^0.04
-execute as @s[scores={lobbydronemv=9..16}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^-0.04
+execute as @s[scores={lobbydronemv=0..7}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^0.04
+execute as @s[scores={lobbydronemv=8..15}] run execute as @e[tag=lobbydrone] at @s run tp @s ^ ^ ^-0.04
 
 
 #Start the game when the lever is pressed, causing a stick to spawn
